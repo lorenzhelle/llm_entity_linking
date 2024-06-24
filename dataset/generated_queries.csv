@@ -62,4 +62,3 @@ ID,Query,Category,Entities,Seen,Notes
 1310,"Smartphone mit Fingerabdrucksensor im Display",Mobiltelefone,"{""ausstattung"":[""Fingerabdrucksensor im Display""]}",False,
 1311,"Laptop mit 13 Zoll Bildschirm und MacOS",Laptops,"{""bildschirmgroesse"":[""13 Zoll""],""betriebssystem"":[""MacOS""]}",False,
 1312,"Tablet mit 9 Zoll Display und 128GB Speicher",Tablets,"{""bildschirmgroesse"":[""9 Zoll""],""speicher"":[""128 GB""]}",False,
-1313,"Smartwatch mit AMOLED-Display und SpO2-Messung",Wearables,"{""displaytyp"":[""AMOLED""],""funktionen"":[""SpO
