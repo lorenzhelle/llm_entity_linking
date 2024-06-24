@@ -6,25 +6,19 @@ json_schema = {
         "description": "Parameter für die Funktion",
         "properties": {
             "Kategorie": {
-                "type": "object",
-                "description": "Kategorie des gewünschten Produkts.",
-                "properties": {
-                    "values": {
-                        "type": "array",
-                        "description": "Kategorie die genannt wurden",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Fernseher",
-                                "Mobiltelefone",
-                                "Tablets",
-                                "Computer",
-                                "Monitor",
-                                "Laptop",
-                                "Andere",
-                            ],
-                        },
-                    }
+                "type": "array",
+                "description": "Kategorie die genannt wurden oder Andere wenn keine passt",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Fernseher",
+                        "Mobiltelefone",
+                        "Tablets",
+                        "Computer",
+                        "Monitor",
+                        "Laptop",
+                        "Andere",
+                    ],
                 },
             },
             "Bildschirmgroesse": {

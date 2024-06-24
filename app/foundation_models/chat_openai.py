@@ -10,7 +10,6 @@ from openai import AzureOpenAI
 
 class AIModelType(str, Enum):
     GPT3 = "GPT3"
-    GPT4 = "GPT4"
     GPT4_TURBO = "GPT4_TURBO"
     GPT4_O = "GPT4_O"
     CLAUDE_OPUS = "CLAUDE_OPUS"

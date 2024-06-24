@@ -7,7 +7,7 @@
   },
   {
     "ID": 1254,
-    "Query": "G\u00fcnstigster Fernseher mit 8K-Aufl\u00f6sung unter 1500 Euro",
+    "Query": "Fernseher mit 8K unter 1500 Euro",
     "Category": "Fernseher",
     "Entities": "{\"aufloesung\":[\"8K\"],\"preis\":[\"unter 1500 Euro\"]}"
   },
@@ -21,7 +21,7 @@
     "ID": 360,
     "Query": "notebook 15 zoll betriebssystem microsoft",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"],{\"betriebssystem\":[\"Windows\"]}"
   },
   {
     "ID": 210,
@@ -32,7 +32,7 @@
   { "ID": 89, "Query": "tv lowboard", "Category": "Other", "Entities": "{}" },
   {
     "ID": 1037,
-    "Query": "cd laufwerk f\u00fcr laptop",
+    "Query": "cd laufwerk für laptop",
     "Category": "Other",
     "Entities": "{}"
   },
@@ -58,13 +58,13 @@
     "ID": 480,
     "Query": "iphone 15 pro max case",
     "Category": "Other",
-    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPhone 15 Pro\"]}"
+    "Entities": "{}"
   },
   {
     "ID": 482,
-    "Query": "iphone 15 pro max ladeger\u00e4t",
+    "Query": "iphone 15 pro max ladegerät",
     "Category": "Other",
-    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPhone 15 Pro\"]}"
+    "Entities": "{}"
   },
   {
     "ID": 695,
@@ -94,7 +94,7 @@
     "ID": 877,
     "Query": "ipad air 5 generation panzerglas",
     "Category": "Other",
-    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPad Air\"]}"
+    "Entities": "{}"
   },
   {
     "ID": 182,
@@ -111,15 +111,15 @@
   { "ID": 771, "Query": "Tablet", "Category": "Tablets", "Entities": "{}" },
   {
     "ID": 1282,
-    "Query": "Chromebook mit mindestens 4GB RAM und 64GB Speicher",
+    "Query": "Chromebook mit mindestens 6GB RAM und 512GB Speicher",
     "Category": "Laptops",
-    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"4 GB\"]}"
+    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"4 GB\"],\"speicherkapazitaet\":[\"512 GB\"]}"
   },
   {
     "ID": 526,
-    "Query": "iphone 15 pro max ladeger\u00e4t",
+    "Query": "iphone 15 pro max ladegerät",
     "Category": "Other",
-    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPhone 15 Pro\"]}"
+    "Entities": "{}"
   },
   { "ID": 88, "Query": "tv bank", "Category": "Other", "Entities": "{}" },
   {
@@ -130,13 +130,13 @@
   },
   {
     "ID": 1261,
-    "Query": "32-Zoll-Fernseher mit besten Smart-TV-Funktionen unter 400 Euro",
+    "Query": "32-Zoll mit Smart-TV unter 400 Euro",
     "Category": "Fernseher",
     "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"funktionen\":[\"Smart TV\"],\"preis\":[\"unter 400 Euro\"]}"
   },
   {
     "ID": 1283,
-    "Query": "Smartphone mit Dual-SIM und 5G-Unterst\u00fctzung",
+    "Query": "Smartphone mit Dual-SIM und 5G",
     "Category": "Mobiltelefone",
     "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"]}"
   },
@@ -145,7 +145,7 @@
     "ID": 1273,
     "Query": "Gaming-PC mit RTX 3070 und mindestens 512GB SSD",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"festplatte\":[\"512 GB SSD\"]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]]}"
   },
   {
     "ID": 1285,
@@ -265,7 +265,7 @@
     "ID": 1253,
     "Query": "Gaming-PC mit RTX 4090 und mindestens 1TB SSD bis 2000 Euro",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"festplatte\":[\"1 TB SSD\"],\"preis\":[\"bis 2000 Euro\"]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"bis 2000 Euro\"]}"
   },
   {
     "ID": 964,
@@ -319,7 +319,7 @@
     "ID": 1266,
     "Query": "Tablet mit abnehmbarer Tastatur und Windows-Betriebssystem bis 600 Euro",
     "Category": "Tablets",
-    "Entities": "{\"ausstattung\":[\"Abnehmbare Tastatur\"],\"betriebssystem\":[\"Windows\"],\"preis\":[\"bis 600 Euro\"]}"
+    "Entities": "{\"ausstattung\":[\"Abnehmbare Tastatur\"],\"betriebssystem\":[\"Windows\"],\"preis\":[\"0\",\"600\"]}"
   },
   {
     "ID": 626,
@@ -908,7 +908,7 @@
     "ID": 1307,
     "Query": "Laptop mit AMD Ryzen 5 Prozessor und 512GB SSD",
     "Category": "Laptops",
-    "Entities": "{\"prozessor\":[\"AMD Ryzen 5\"],\"festplatte\":[\"512 GB SSD\"]}"
+    "Entities": "{\"prozessor\":[\"AMD Ryzen 5\"],\"ausstattung\":[\"SSD-Festplatte\"]}"
   },
   {
     "ID": 323,

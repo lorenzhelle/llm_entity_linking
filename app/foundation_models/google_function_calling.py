@@ -352,6 +352,10 @@ class GoogleFunctionCalling:
         for attr in params:
             filter_data = params[attr]
 
+            if filter_data == "unknown":
+                filter_data = None
+                continue
+
             if type(filter_data) is proto.marshal.collections.maps.MapComposite:
                 # convert proto map to dict
                 print("convert to dict", filter_data)
@@ -359,7 +363,7 @@ class GoogleFunctionCalling:
 
             # replace unknown token with Null if it is a string
             if type(filter_data) is str:
-                filter_data = filter_data.replace("<UNKNOWN>", "null")
+                filter_data = filter_data.replace("unknown", "null")
                 # convert string to json
                 filter_data = json.loads(filter_data)
 
