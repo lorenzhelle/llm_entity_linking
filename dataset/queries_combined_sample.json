@@ -461,9 +461,9 @@
   },
   {
     "ID": 1252,
-    "Query": "Smartphone mit bester Kameraqualit\u00e4t 2024 zwischen 500 und 1000 Euro",
+    "Query": "Smartphone mit bester Kameraqualit\u00e4t zwischen 500 und 1000 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"preis\":[\"500 bis 1000 Euro\"]}"
+    "Entities": "{\"preis\":[\"500\",\"1000\"]}"
   },
   {
     "ID": 1083,
@@ -541,7 +541,7 @@
     "ID": 1270,
     "Query": "Laptop mit 13 Zoll Bildschirm und 16GB RAM bis 1000 Euro",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"bis 1000 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"1000\"]}"
   },
   {
     "ID": 595,
@@ -553,7 +553,7 @@
     "ID": 1260,
     "Query": "Desktop-PC f\u00fcr Videobearbeitung mit 32GB RAM bis 1500 Euro",
     "Category": "Computer",
-    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\""]}"
+    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\"0\",\"1500\"]}"
   },
   {
     "ID": 1202,
@@ -638,7 +638,7 @@
     "ID": 1299,
     "Query": "Tablet mit 11 Zoll Display und LTE-Unterst\u00fctzung",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"11 Zoll\"],\"verbindung\":[\"LTE\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"11 Zoll\"],\"ausstattung\":[\"mobiles Internet\"]}"
   },
   {
     "ID": 897,
@@ -714,9 +714,9 @@
   },
   {
     "ID": 1264,
-    "Query": "Laptop mit bester Akkulaufzeit f\u00fcr Studenten bis 1000 Euro",
+    "Query": "Laptop mit guter Akkulaufzeit bis 1000 Euro",
     "Category": "Laptops",
-    "Entities": "{\"zielgruppe\":[\"Studenten\"],\"preis\":[\"bis 1000 Euro\"]}"
+    "Entities": "{\"preis\":[\"0\",\"1000\"]}"
   },
   {
     "ID": 460,
@@ -842,7 +842,7 @@
     "ID": 1263,
     "Query": "Smartphone mit Dual-SIM und 5G-Unterst\u00fctzung unter 600 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\": [\"0\",\"600\"}"
+    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\": [\"0\",\"600\"]}"
   },
   {
     "ID": 1300,

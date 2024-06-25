@@ -15,6 +15,8 @@ mistral = "^18.0.1"
 mistralai = "^0.4.0"
 google-generativeai = "^0.7.0"
 vertexai = "^1.49.0"
+matplotlib = "^3.9.0"
+seaborn = "^0.13.2"
 
 
 [build-system]

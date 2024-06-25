@@ -17,7 +17,7 @@ json_schema = {
                         "Tablets",
                         "Computer",
                         "Monitor",
-                        "Laptop",
+                        "Laptops",
                         "Andere",
                     ],
                 },
@@ -136,7 +136,12 @@ json_schema = {
                         "description": "Aufloesung die genannt wurden",
                         "items": {
                             "type": "string",
-                            "enum": ["Ultra-HD-8K", "Ultra-HD ", "Ultra-HD-4K"],
+                            "enum": [
+                                "Ultra-HD-8K",
+                                "Ultra-HD ",
+                                "Ultra-HD-4K",
+                                "Full-HD",
+                            ],
                         },
                     }
                 },

@@ -4,13 +4,13 @@
     "Query": "macbook pro m2 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M2\"],\"modellreihe\":[\"MacBook Pro\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Pro\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Pro\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
   },
   {
     "ID": 1254,
     "Query": "Fernseher mit 8K unter 1500 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"aufloesung\":[\"8K\"],\"preis\":[\"0\",\"1500\"]}",
+    "Entities": "{\"aufloesung\":[\"Ultra-HD-8K\"],\"preis\":[\"0\",\"1500\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Fernseher\"]}, {\"id\": \"Aufloesung\", \"values\": [\"Ultra-HD-8K\"]}, {\"id\": \"Preis\", \"maximum\": 1500}]"
   },
   {
@@ -24,15 +24,15 @@
     "ID": 360,
     "Query": "notebook 15 zoll betriebssystem microsoft",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"],{\"betriebssystem\":[\"Windows\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
+    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"], \"betriebssystem\":[\"Windows\"]}",
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
   },
   {
     "ID": 210,
     "Query": "laptop 15 zoll angebote windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
   },
   {
     "ID": 89,
@@ -123,7 +123,7 @@
     "Query": "laptop 17 zoll windows 11 i7",
     "Category": "Laptops",
     "Entities": "{\"prozessor\":[\"Intel Core i7\"],\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
   },
   {
     "ID": 387,
@@ -141,9 +141,9 @@
   },
   {
     "ID": 1282,
-    "Query": "Chromebook mit mindestens 6GB RAM und 512GB Speicher",
+    "Query": "Chromebook mit 6GB RAM und 512GB Speicher",
     "Category": "Laptops",
-    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"4 GB\"],\"speicherkapazitaet\":[\"512 GB\"]}",
+    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"6 GB\"],\"speicherkapazitaet\":[\"512 GB\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"6 GB\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"512 GB\"]}, {\"id\": \"Modellreihe\", \"values\": [\"Chromebook\"]}]"
   },
   {
@@ -165,13 +165,13 @@
     "Query": "notebook 15 zoll lenovo",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Lenovo\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Lenovo\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Lenovo\"]}]"
   },
   {
     "ID": 1261,
     "Query": "32-Zoll mit Smart-TV unter 400 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"funktionen\":[\"Smart TV\"],\"preis\":[\"0\",\"400\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"ausstattung\":[\"Smart TV\"],\"preis\":[\"0\",\"400\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Fernseher\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"32 Zoll\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Smart-TV\"]}, {\"id\": \"Preis\", \"maximum\": 400}]"
   },
   {
@@ -192,7 +192,7 @@
     "ID": 1273,
     "Query": "Gaming-PC mit RTX 3070 und mindestens 512GB SSD",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]]}",
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Grafikkarte\", \"values\": [\"RTX 3070\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"512 GB\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
   },
   {
@@ -207,7 +207,7 @@
     "Query": "Laptop mit 13 Zoll Bildschirm und MacOS",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"betriebssystem\":[\"MacOS\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"13 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"MacOS\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"13 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"MacOS\"]}]"
   },
   {
     "ID": 34,
@@ -241,7 +241,7 @@
     "ID": 1256,
     "Query": "4K-Monitor mit 144 Hz und 27 Zoll bis 500 Euro",
     "Category": "Monitor",
-    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]]}",
+    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Monitor\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"27 Zoll\"]}, {\"id\": \"Aufloesung\", \"values\": [\"Ultra-HD-4K\"]}, {\"id\": \"Bildwiederholungsfrequenz\", \"values\": [\"144 Hz\"]}, {\"id\": \"Preis\", \"maximum\": 500}]"
   },
   {
@@ -256,7 +256,7 @@
     "Query": "laptop 17 zoll",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}]"
   },
   {
     "ID": 1308,
@@ -284,14 +284,14 @@
     "Query": "macbook air m2 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M2\"],\"modellreihe\":[\"MacBook Air\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}]"
   },
   {
     "ID": 289,
     "Query": "macbook air m2 512 gb 16 gb 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M2\"],\"modellreihe\":[\"MacBook Air\"],\"arbeitsspeicher\":[\"16 GB\"],\"bildschirmgroesse\":[\"15 Zoll\"],\"speicherkapazitaet\":[\"512 GB\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"512 GB\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"512 GB\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
   },
   {
     "ID": 528,
@@ -305,14 +305,14 @@
     "Query": "Laptop mit langer Akkulaufzeit f\u00fcr Studenten",
     "Category": "Laptops",
     "Entities": "{\"zielgruppe\":[\"Studenten\"],\"ausstattung\":[\"Lange Akkulaufzeit\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Ausstattung\", \"values\": [\"langer Akkulaufzeit\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Ausstattung\", \"values\": [\"langer Akkulaufzeit\"]}]"
   },
   {
     "ID": 212,
     "Query": "laptop 17 zoll windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows 11\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows 11\"]}]"
   },
   {
     "ID": 1051,
@@ -332,7 +332,7 @@
     "ID": 1253,
     "Query": "Gaming-PC mit RTX 4090 und mindestens 1TB SSD bis 2000 Euro",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"0\",\"2000\"]}",
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"0\",\"2000\"], \"speicherkapazitaet\":[\"1 TB\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Grafikkarte\", \"values\": [\"RTX 4090\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"1 TB\"]}, {\"id\": \"Preis\", \"maximum\": 2000}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
   },
   {
@@ -347,7 +347,7 @@
     "Query": "notebook 17 zoll microsoft office",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"Surface\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"Surface\"]}]"
   },
   {
     "ID": 1278,
@@ -410,7 +410,7 @@
     "Query": "MacBook Pro mit M2-Chip und 16GB RAM unter 2000 Euro",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"MacBook Pro\"],\"prozessor\":[\"M2\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"2000\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 2000}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 2000}]"
   },
   {
     "ID": 1196,
@@ -456,9 +456,9 @@
   },
   {
     "ID": 1262,
-    "Query": "Chromebook mit mindestens 8GB RAM und 128GB Speicher bis 500 Euro",
+    "Query": "Chromebook mit 8GB RAM und 128GB Speicher bis 500 Euro",
     "Category": "Laptops",
-    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"bis 500 Euro\"]}",
+    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"0\",\"500\"],\"speicherkapazitaet\":[\"128 GB\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Modellreihe\", \"values\": [\"Chromebook\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"8 GB\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"128 GB\"]}, {\"id\": \"Preis\", \"maximum\": 500}]"
   },
   {
@@ -473,7 +473,7 @@
     "Query": "laptop 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
   },
   {
     "ID": 1012,
@@ -515,14 +515,14 @@
     "Query": "laptop 15 zoll i5 16 gb ram",
     "Category": "Laptops",
     "Entities": "{\"prozessor\":[\"Intel Core i5\"],\"arbeitsspeicher\":[\"16 GB\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i5\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i5\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}]"
   },
   {
     "ID": 1250,
     "Query": "Laptop mit 16 Zoll Bildschirm und 8GB RAM bis 800 Euro",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"16 Zoll\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"bis 800 Euro\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"16 Zoll\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"8 GB\"]}, {\"id\": \"Preis\", \"maximum\": 800}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"16 Zoll\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"8 GB\"]}, {\"id\": \"Preis\", \"maximum\": 800}]"
   },
   {
     "ID": 662,
@@ -536,7 +536,7 @@
     "Query": "macbook air m1",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M1\"],\"modellreihe\":[\"MacBook Air\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Prozessor\", \"values\": [\"M1\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}, {\"id\": \"Prozessor\", \"values\": [\"M1\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}]"
   },
   {
     "ID": 56,
@@ -561,9 +561,9 @@
   },
   {
     "ID": 1252,
-    "Query": "Smartphone mit bester Kameraqualit\u00e4t 2024 zwischen 500 und 1000 Euro",
+    "Query": "Smartphone mit bester Kameraqualit\u00e4t zwischen 500 und 1000 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"preis\":[\"500 bis 1000 Euro\"]}",
+    "Entities": "{\"preis\":[\"500\",\"1000\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Preis\", \"minimum\": 500, \"maximum\": 1000}]"
   },
   {
@@ -585,7 +585,7 @@
     "Query": "chromebook plus intel core",
     "Category": "Laptops",
     "Entities": "{\"prozessor\":[\"Intel\"],\"modellreihe\":[\"Chromebook\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\", \"Laptop\"]}, {\"id\": \"Marke\", \"values\": [\"Chromebook\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\", \"Laptops\"]}, {\"id\": \"Marke\", \"values\": [\"Chromebook\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core\"]}]"
   },
   {
     "ID": 1172,
@@ -606,7 +606,7 @@
     "Query": "notebook 15 zoll touchscreen",
     "Category": "Laptops",
     "Entities": "{\"ausstattung\":[\"Touch Display\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Displaytechnologie\", \"values\": [\"Touch Display\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Displaytechnologie\", \"values\": [\"Touch Display\"]}]"
   },
   {
     "ID": 694,
@@ -626,19 +626,19 @@
     "ID": 1255,
     "Query": "Notebook mit Touchscreen und 360-Grad-Scharnier unter 700 Euro",
     "Category": "Laptops",
-    "Entities": "{\"ausstattung\":[\"Touch Display\"],\"preis\":[\"unter 700 Euro\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Touch Display\", \"2 in 1 Convertible\"]}, {\"id\": \"Preis\", \"maximum\": 700}]"
+    "Entities": "{\"ausstattung\":[\"Touch Display\"],\"preis\":[\"0\",\"700\"]}",
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Touch Display\", \"2 in 1 Convertible\"]}, {\"id\": \"Preis\", \"maximum\": 700}]"
   },
   {
     "ID": 384,
     "Query": "notebook 15 zoll hp",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"HP\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"HP\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"HP\"]}]"
   },
   {
     "ID": 1292,
-    "Query": "Smartphone mit AMOLED-Display und mindestens 128GB Speicher",
+    "Query": "Smartphone mit AMOLED-Display und 128GB Speicher",
     "Category": "Mobiltelefone",
     "Entities": "{\"ausstattung\":[\"AMOLED-Display\"],\"speicher\":[\"128 GB\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Displaytechnologie\", \"values\": [\"AMOLED\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"128 GB\"]}]"
@@ -654,8 +654,8 @@
     "ID": 1270,
     "Query": "Laptop mit 13 Zoll Bildschirm und 16GB RAM bis 1000 Euro",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"bis 1000 Euro\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"13 Zoll\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 1000}]"
+    "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"1000\"]}",
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"13 Zoll\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 1000}]"
   },
   {
     "ID": 595,
@@ -668,7 +668,7 @@
     "ID": 1260,
     "Query": "Desktop-PC f\u00fcr Videobearbeitung mit mindestens 32GB RAM bis 1500 Euro",
     "Category": "Computer",
-    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\"bis 1500 Euro\"]}",
+    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\"0\",\"1500\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Preis\", \"maximum\": 1500}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"32 GB\"]}]"
   },
   {
@@ -703,7 +703,7 @@
     "ID": 1269,
     "Query": "Fernseher mit eingebauter Soundbar und 55 Zoll Display unter 1200 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"55 - 59 Zoll\"],\"ausstattung\":[\"Eingebaute Soundbar\"],\"preis\":[\"unter 1200 Euro\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"55 - 59 Zoll\"],\"ausstattung\":[\"Eingebaute Soundbar\"],\"preis\":[\"0\",\"1200\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Fernseher\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"55 - 59 Zoll\"]}, {\"id\": \"Preis\", \"maximum\": 1200}]"
   },
   {
@@ -718,7 +718,7 @@
     "Query": "notebook 17 zoll rtx 4070",
     "Category": "Laptops",
     "Entities": "{\"grafikkarte\":[\"GeForce RTX 4070\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Grafikkarte\", \"values\": [\"RTX 4070\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Grafikkarte\", \"values\": [\"RTX 4070\"]}]"
   },
   {
     "ID": 1156,
@@ -732,7 +732,7 @@
     "Query": "laptop 17 zoll core i7",
     "Category": "Laptops",
     "Entities": "{\"prozessor\":[\"Intel Core i7\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
   },
   {
     "ID": 1215,
@@ -766,14 +766,14 @@
     "ID": 1265,
     "Query": "Desktop-PC mit vorinstalliertem Linux-Betriebssystem unter 800 Euro",
     "Category": "Computer",
-    "Entities": "{\"betriebssystem\":[\"Linux\"],\"preis\":[\"unter 800 Euro\"]}",
+    "Entities": "{\"betriebssystem\":[\"Linux\"],\"preis\": [\"0\",\"800\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Linux\"]}, {\"id\": \"Preis\", \"maximum\": 800}]"
   },
   {
     "ID": 1299,
     "Query": "Tablet mit 11 Zoll Display und LTE-Unterst\u00fctzung",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"11 Zoll\"],\"verbindung\":[\"LTE\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"11 Zoll\"],\"ausstattung\":[\"mobiles Internet\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"11 Zoll\"]}, {\"id\": \"Ausstattung\", \"values\": [\"mobiles Internet\"]}]"
   },
   {
@@ -802,7 +802,7 @@
     "Query": "laptop tasche",
     "Category": "Other",
     "Entities": "{}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}]"
   },
   {
     "ID": 582,
@@ -816,7 +816,7 @@
     "Query": "notebooks 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
   },
   {
     "ID": 1295,
@@ -836,7 +836,7 @@
     "ID": 1267,
     "Query": "24-Zoll-Monitor mit integriertem Lautsprecher unter 300 Euro",
     "Category": "Monitor",
-    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"ausstattung\":[\"Integrierte Lautsprecher\"],\"preis\":[\"unter 300 Euro\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"ausstattung\":[\"Integrierte Lautsprecher\"],\"preis\": [\"0\",\"300\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Monitor\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"24 Zoll\"]}, {\"id\": \"Preis\", \"maximum\": 300}]"
   },
   {
@@ -844,28 +844,28 @@
     "Query": "laptop 32 gb ram",
     "Category": "Laptops",
     "Entities": "{}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"32 GB\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Arbeitsspeicher\", \"values\": [\"32 GB\"]}]"
   },
   {
     "ID": 1290,
     "Query": "Laptop mit 15 Zoll Bildschirm und Intel Core i7",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"],\"prozessor\":[\"Intel Core i7\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
   },
   {
     "ID": 1271,
     "Query": "Tablet mit 12 Zoll Display und iOS-Betriebssystem unter 800 Euro",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"12 Zoll\"],\"betriebssystem\":[\"iOS\"],\"preis\":[\"unter 800 Euro\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"12 Zoll\"],\"betriebssystem\":[\"iOS\"],\"preis\": [\"0\",\"800\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"12 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"iOS\"]}, {\"id\": \"Preis\", \"maximum\": 800}]"
   },
   {
     "ID": 1264,
-    "Query": "Laptop mit bester Akkulaufzeit f\u00fcr Studenten bis 1000 Euro",
+    "Query": "Laptop mit guter Akkulaufzeit bis 1000 Euro",
     "Category": "Laptops",
-    "Entities": "{\"zielgruppe\":[\"Studenten\"],\"preis\":[\"bis 1000 Euro\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Preis\", \"maximum\": 1000}, {\"id\": \"Ausstattung\", \"values\": [\"lange Akkulaufzeit\"]}]"
+    "Entities": "{\"preis\":[\"0\",\"1000\"]}",
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Preis\", \"maximum\": 1000}, {\"id\": \"Ausstattung\", \"values\": [\"lange Akkulaufzeit\"]}]"
   },
   {
     "ID": 460,
@@ -892,7 +892,7 @@
     "ID": 1251,
     "Query": "Tablet mit 10 Zoll Display und Android-Betriebssystem unter 300 Euro",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"],\"betriebssystem\":[\"Android\"],\"preis\":[\"unter 300 Euro\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"],\"betriebssystem\":[\"Android\"],\"preis\": [\"0\",\"300\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"10 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Android\"]}, {\"id\": \"Preis\", \"maximum\": 300}]"
   },
   {
@@ -907,7 +907,7 @@
     "Query": "laptop 17 zoll gaming",
     "Category": "Laptops",
     "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
   },
   {
     "ID": 536,
@@ -1011,7 +1011,7 @@
     "ID": 1263,
     "Query": "Smartphone mit Dual-SIM und 5G-Unterst\u00fctzung unter 600 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\":[\"unter 600 Euro\"]}",
+    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\": [\"0\",\"600\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Ausstattung\", \"values\": [\"5G\"]}, {\"id\": \"Preis\", \"maximum\": 600}]"
   },
   {
@@ -1047,7 +1047,7 @@
     "Query": "Notebook mit Touchscreen und 360-Grad-Scharnier",
     "Category": "Laptops",
     "Entities": "{\"ausstattung\":[\"Touch Display\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Touch Display\", \"2 in 1 Convertible\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Touch Display\", \"2 in 1 Convertible\"]}]"
   },
   {
     "ID": 1211,
@@ -1067,14 +1067,14 @@
     "ID": 1281,
     "Query": "Fernseher mit 40 Zoll und Smart-TV-Funktionen",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"40 - 44 Zoll\"],\"funktionen\":[\"Smart TV\"]}",
+    "Entities": "{\"bildschirmgroesse\":[\"40 - 44 Zoll\"],\"ausstattung\":[\"Smart TV\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Fernseher\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"40 - 44 Zoll\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Smart-TV\"]}]"
   },
   {
     "ID": 1306,
     "Query": "Smartwatch mit LTE und Musikstreaming",
     "Category": "Wearables",
-    "Entities": "{\"verbindung\":[\"LTE\"],\"funktionen\":[\"Musikstreaming\"]}",
+    "Entities": "{\"verbindung\":[\"LTE\"],\"Ausstattung\":[\"Musikstreaming\"]}",
     "Prediction": "[{\"id\": \"Ausstattung\", \"values\": [\"mobiles Internet\"]}]"
   },
   {
@@ -1096,7 +1096,7 @@
     "Query": "notebook 17 zoll acer",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Acer\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Acer\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Acer\"]}]"
   },
   {
     "ID": 876,
@@ -1110,7 +1110,7 @@
     "Query": "Laptop mit 17 Zoll Bildschirm und Windows 11",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"17 Zoll\"],\"betriebssystem\":[\"Windows 11\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
   },
   {
     "ID": 693,
@@ -1200,15 +1200,15 @@
     "ID": 1298,
     "Query": "Ultrabook mit 14 Zoll Bildschirm und unter 1,5 kg Gewicht",
     "Category": "Laptops",
-    "Entities": "{\"typ\":[\"Ultrabook\"],\"bildschirmgroesse\":[\"14 Zoll\"],\"gewicht\":[\"unter 1,5 kg\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"14 Zoll\"]}, {\"id\": \"Gewicht\", \"values\": [\"unter 1,5 kg\"]}]"
+    "Entities": "{\"typ\":[\"Ultrabook\"],\"bildschirmgroesse\":[\"14 Zoll\"]}",
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"14 Zoll\"]}, {\"id\": \"Gewicht\", \"values\": [\"unter 1,5 kg\"]}]"
   },
   {
     "ID": 213,
     "Query": "laptop 15 zoll angebote windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
   },
   {
     "ID": 1272,
@@ -1278,7 +1278,7 @@
     "Query": "notebook 15 zoll lenovo",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Lenovo\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Lenovo\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Marke\", \"values\": [\"Lenovo\"]}]"
   },
   {
     "ID": 1216,
@@ -1298,7 +1298,7 @@
     "ID": 1257,
     "Query": "Robustes Outdoor-Smartphone mit langer Akkulaufzeit unter 400 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Lange Akkulaufzeit\"],\"typ\":[\"Outdoor-Smartphone\"],\"preis\":[\"unter 400 Euro\"]}",
+    "Entities": "{\"ausstattung\":[\"Lange Akkulaufzeit\"],\"typ\":[\"Outdoor-Smartphone\"],\"preis\":[\"0\",\"400\"]}",
     "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Preis\", \"maximum\": 400}, {\"id\": \"Ausstattung\", \"values\": [\"langer Akkulaufzeit\"]}]"
   },
   {
@@ -1327,14 +1327,14 @@
     "Query": "notebook 15 zoll windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}]"
   },
   {
     "ID": 363,
     "Query": "notebook 15 zoll i7",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Prozessor\", \"values\": [\"Intel Core i7\"]}]"
   },
   {
     "ID": 1310,
@@ -1362,7 +1362,7 @@
     "Query": "laptop 14 zoll windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"14 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"14 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows 11\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"14 Zoll\"]}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows 11\"]}]"
   },
   {
     "ID": 665,
@@ -1390,13 +1390,13 @@
     "Query": "macbook air m2 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M2\"],\"modellreihe\":[\"MacBook Air\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}]"
   },
   {
     "ID": 158,
     "Query": "laptop gaming",
     "Category": "Laptops",
     "Entities": "{\"zubehoerfuer\":[\"Gaming\"]}",
-    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptop\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
   }
 ]

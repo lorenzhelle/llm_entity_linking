@@ -62,7 +62,7 @@ class GoogleFunctionCalling:
                             "Tablets",
                             "Computer",
                             "Monitor",
-                            "Laptop",
+                            "Laptops",
                             "Andere",
                         ],
                     },
