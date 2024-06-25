@@ -4,6 +4,7 @@ json_schema = {
     "parameters": {
         "type": "object",
         "description": "Parameter für die Funktion",
+        "required": ["Kategorie"],
         "properties": {
             "Kategorie": {
                 "type": "array",
