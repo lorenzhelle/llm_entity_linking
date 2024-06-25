@@ -9,7 +9,7 @@
     "ID": 1254,
     "Query": "Fernseher mit 8K unter 1500 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"aufloesung\":[\"8K\"],\"preis\":[\"0\",\"1500\"]}"
+    "Entities": "{\"aufloesung\":[\"Ultra-HD-8K\"],\"preis\":[\"0\",\"1500\"]}"
   },
   {
     "ID": 996,
@@ -21,7 +21,7 @@
     "ID": 360,
     "Query": "notebook 15 zoll betriebssystem microsoft",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"],{\"betriebssystem\":[\"Windows\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"], \"betriebssystem\":[\"Windows\"]}"
   },
   {
     "ID": 210,
@@ -111,9 +111,9 @@
   { "ID": 771, "Query": "Tablet", "Category": "Tablets", "Entities": "{}" },
   {
     "ID": 1282,
-    "Query": "Chromebook mit mindestens 6GB RAM und 512GB Speicher",
+    "Query": "Chromebook mit 6GB RAM und 512GB Speicher",
     "Category": "Laptops",
-    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"4 GB\"],\"speicherkapazitaet\":[\"512 GB\"]}"
+    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"6 GB\"],\"speicherkapazitaet\":[\"512 GB\"]}"
   },
   {
     "ID": 526,
@@ -132,7 +132,7 @@
     "ID": 1261,
     "Query": "32-Zoll mit Smart-TV unter 400 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"funktionen\":[\"Smart TV\"],\"preis\":[\"0\",\"400\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"ausstattung\":[\"Smart TV\"],\"preis\":[\"0\",\"400\"]}"
   },
   {
     "ID": 1283,
@@ -143,9 +143,9 @@
   { "ID": 83, "Query": "tv board", "Category": "Other", "Entities": "{}" },
   {
     "ID": 1273,
-    "Query": "Gaming-PC mit RTX 3070 und mindestens 512GB SSD",
+    "Query": "Gaming-PC mit RTX 3070 und 512GB SSD",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]}"
   },
   {
     "ID": 1285,
@@ -187,7 +187,7 @@
     "ID": 1256,
     "Query": "4K-Monitor mit 144 Hz und 27 Zoll bis 500 Euro",
     "Category": "Monitor",
-    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]]}"
+    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]}"
   },
   {
     "ID": 937,
@@ -263,9 +263,9 @@
   },
   {
     "ID": 1253,
-    "Query": "Gaming-PC mit RTX 4090 und mindestens 1TB SSD bis 2000 Euro",
+    "Query": "Gaming-PC mit RTX 4090 und 1TB SSD bis 2000 Euro",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"0\",\"2000\"]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"0\",\"2000\"],\"speicherkapazitaet\":[\"1 TB\"]}"
   },
   {
     "ID": 964,
@@ -371,9 +371,9 @@
   },
   {
     "ID": 1262,
-    "Query": "Chromebook mit mindestens 8GB RAM und 128GB Speicher bis 500 Euro",
+    "Query": "Chromebook mit 8GB RAM und 128GB Speicher bis 500 Euro",
     "Category": "Laptops",
-    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"bis 500 Euro\"]}"
+    "Entities": "{\"modellreihe\":[\"Chromebook\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"0\",\"500\"],\"speicherkapazitaet\":[\"128 GB\"]}"
   },
   {
     "ID": 838,
@@ -517,7 +517,7 @@
     "ID": 1255,
     "Query": "Notebook mit Touchscreen und 360-Grad-Scharnier unter 700 Euro",
     "Category": "Laptops",
-    "Entities": "{\"ausstattung\":[\"Touch Display\"],\"preis\":[\"unter 700 Euro\"]}"
+    "Entities": "{\"ausstattung\":[\"Touch Display\"],\"preis\":[\"0\",\"700\"]}"
   },
   {
     "ID": 384,
@@ -527,7 +527,7 @@
   },
   {
     "ID": 1292,
-    "Query": "Smartphone mit AMOLED-Display und mindestens 128GB Speicher",
+    "Query": "Smartphone mit AMOLED-Display und 128GB Speicher",
     "Category": "Mobiltelefone",
     "Entities": "{\"ausstattung\":[\"AMOLED-Display\"],\"speicher\":[\"128 GB\"]}"
   },
@@ -551,9 +551,9 @@
   },
   {
     "ID": 1260,
-    "Query": "Desktop-PC f\u00fcr Videobearbeitung mit mindestens 32GB RAM bis 1500 Euro",
+    "Query": "Desktop-PC f\u00fcr Videobearbeitung mit 32GB RAM bis 1500 Euro",
     "Category": "Computer",
-    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\"bis 1500 Euro\"]}"
+    "Entities": "{\"anwendung\":[\"Videobearbeitung\"],\"arbeitsspeicher\":[\"32 GB\"],\"preis\":[\""]}"
   },
   {
     "ID": 1202,
@@ -583,7 +583,7 @@
     "ID": 1269,
     "Query": "Fernseher mit eingebauter Soundbar und 55 Zoll Display unter 1200 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"55 - 59 Zoll\"],\"ausstattung\":[\"Eingebaute Soundbar\"],\"preis\":[\"unter 1200 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"55 - 59 Zoll\"],\"ausstattung\":[\"Eingebaute Soundbar\"],\"preis\":[\"0\",\"1200\"]}"
   },
   {
     "ID": 443,
@@ -632,7 +632,7 @@
     "ID": 1265,
     "Query": "Desktop-PC mit vorinstalliertem Linux-Betriebssystem unter 800 Euro",
     "Category": "Computer",
-    "Entities": "{\"betriebssystem\":[\"Linux\"],\"preis\":[\"unter 800 Euro\"]}"
+    "Entities": "{\"betriebssystem\":[\"Linux\"],\"preis\": [\"0\",\"800\"] }"
   },
   {
     "ID": 1299,
@@ -692,7 +692,7 @@
     "ID": 1267,
     "Query": "24-Zoll-Monitor mit integriertem Lautsprecher unter 300 Euro",
     "Category": "Monitor",
-    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"ausstattung\":[\"Integrierte Lautsprecher\"],\"preis\":[\"unter 300 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"ausstattung\":[\"Integrierte Lautsprecher\"],\"preis\": [\"0\",\"300\"]}"
   },
   {
     "ID": 1136,
@@ -710,7 +710,7 @@
     "ID": 1271,
     "Query": "Tablet mit 12 Zoll Display und iOS-Betriebssystem unter 800 Euro",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"12 Zoll\"],\"betriebssystem\":[\"iOS\"],\"preis\":[\"unter 800 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"12 Zoll\"],\"betriebssystem\":[\"iOS\"],\"preis\": [\"0\",\"800\"]}"
   },
   {
     "ID": 1264,
@@ -740,7 +740,7 @@
     "ID": 1251,
     "Query": "Tablet mit 10 Zoll Display und Android-Betriebssystem unter 300 Euro",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"],\"betriebssystem\":[\"Android\"],\"preis\":[\"unter 300 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"],\"betriebssystem\":[\"Android\"], \"preis\": [\"0\",\"300\"]}"
   },
   {
     "ID": 1108,
@@ -842,7 +842,7 @@
     "ID": 1263,
     "Query": "Smartphone mit Dual-SIM und 5G-Unterst\u00fctzung unter 600 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\":[\"unter 600 Euro\"]}"
+    "Entities": "{\"ausstattung\":[\"Dual-SIM\",\"5G\"],\"preis\": [\"0\",\"600\"}"
   },
   {
     "ID": 1300,
@@ -890,13 +890,13 @@
     "ID": 1281,
     "Query": "Fernseher mit 40 Zoll und Smart-TV-Funktionen",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"40 - 44 Zoll\"],\"funktionen\":[\"Smart TV\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"40 - 44 Zoll\"],\"ausstattung\":[\"Smart TV\"]}"
   },
   {
     "ID": 1306,
     "Query": "Smartwatch mit LTE und Musikstreaming",
     "Category": "Wearables",
-    "Entities": "{\"verbindung\":[\"LTE\"],\"funktionen\":[\"Musikstreaming\"]}"
+    "Entities": "{\"verbindung\":[\"LTE\"],\"ausstattung\":[\"Musikstreaming\"]}"
   },
   {
     "ID": 85,
@@ -1004,7 +1004,7 @@
     "ID": 1298,
     "Query": "Ultrabook mit 14 Zoll Bildschirm und unter 1,5 kg Gewicht",
     "Category": "Laptops",
-    "Entities": "{\"typ\":[\"Ultrabook\"],\"bildschirmgroesse\":[\"14 Zoll\"],\"gewicht\":[\"unter 1,5 kg\"]}"
+    "Entities": "{\"typ\":[\"Ultrabook\"],\"bildschirmgroesse\":[\"14 Zoll\"]}"
   },
   {
     "ID": 213,
@@ -1088,7 +1088,7 @@
     "ID": 1257,
     "Query": "Robustes Outdoor-Smartphone mit langer Akkulaufzeit unter 400 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Lange Akkulaufzeit\"],\"typ\":[\"Outdoor-Smartphone\"],\"preis\":[\"unter 400 Euro\"]}"
+    "Entities": "{\"ausstattung\":[\"Lange Akkulaufzeit\"],\"typ\":[\"Outdoor-Smartphone\"],\"preis\":[\"0\",\"400\"]}"
   },
   {
     "ID": 388,
