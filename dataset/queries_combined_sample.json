@@ -145,7 +145,7 @@
     "ID": 1273,
     "Query": "Gaming-PC mit RTX 3070 und 512GB SSD",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 3070\"],\"ausstattung\":[\"SSD-Festplatte\"],\"speicherkapazitaet\":[\"512 GB\"]}"
   },
   {
     "ID": 1285,
@@ -187,7 +187,7 @@
     "ID": 1256,
     "Query": "4K-Monitor mit 144 Hz und 27 Zoll bis 500 Euro",
     "Category": "Monitor",
-    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]}"
+    "Entities": "{\"aufloesung\":[\"Ultra-HD\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]}"
   },
   {
     "ID": 937,
@@ -215,7 +215,7 @@
   },
   {
     "ID": 1225,
-    "Query": "windows 11",
+    "Query": "windows 11 rechner",
     "Category": "Computer",
     "Entities": "{\"betriebssystem\":[\"Windows\"]}"
   },
@@ -493,7 +493,7 @@
     "ID": 1286,
     "Query": "Tablet mit abnehmbarer Tastatur und Android-Betriebssystem",
     "Category": "Tablets",
-    "Entities": "{\"ausstattung\":[\"Abnehmbare Tastatur\"],\"betriebssystem\":[\"Android\"]}"
+    "Entities": "{\"ausstattung\":[\"Tastatur\"],\"betriebssystem\":[\"Android\"]}"
   },
   {
     "ID": 358,
@@ -517,7 +517,7 @@
     "ID": 1255,
     "Query": "Notebook mit Touchscreen und 360-Grad-Scharnier unter 700 Euro",
     "Category": "Laptops",
-    "Entities": "{\"ausstattung\":[\"Touch Display\"],\"preis\":[\"0\",\"700\"]}"
+    "Entities": "{\"ausstattung\":[\"Touch Display\",\"2 in 1 Convertible\"],\"preis\":[\"0\",\"700\"]}"
   },
   {
     "ID": 384,
@@ -529,13 +529,13 @@
     "ID": 1292,
     "Query": "Smartphone mit AMOLED-Display und 128GB Speicher",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"AMOLED-Display\"],\"speicher\":[\"128 GB\"]}"
+    "Entities": "{\"speicher\":[\"128 GB\"]}"
   },
   {
     "ID": 1287,
     "Query": "Monitor mit integriertem Lautsprecher",
     "Category": "Monitor",
-    "Entities": "{\"ausstattung\":[\"Integrierte Lautsprecher\"]}"
+    "Entities": "{}"
   },
   {
     "ID": 1270,
@@ -565,7 +565,7 @@
     "ID": 1312,
     "Query": "Tablet mit 9 Zoll Display und 128GB Speicher",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"9 Zoll\"],\"speicher\":[\"128 GB\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"9 Zoll\"],\"speicherkapazitaet\":[\"128 GB\"]}"
   },
   {
     "ID": 32,
@@ -692,13 +692,13 @@
     "ID": 1267,
     "Query": "24-Zoll-Monitor mit integriertem Lautsprecher unter 300 Euro",
     "Category": "Monitor",
-    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"ausstattung\":[\"Integrierte Lautsprecher\"],\"preis\": [\"0\",\"300\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"24 Zoll\"],\"preis\": [\"0\",\"300\"]}"
   },
   {
     "ID": 1136,
     "Query": "laptop 32 gb ram",
     "Category": "Laptops",
-    "Entities": "{}"
+    "Entities": "{\"arbeitsspeicher\":[\"32 GB\"]}"
   },
   {
     "ID": 1290,
@@ -788,7 +788,7 @@
     "ID": 1291,
     "Query": "Tablet mit 8 Zoll Display und Wi-Fi only",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"8 Zoll\"],\"verbindung\":[\"Wi-Fi only\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"8 Zoll\"],\"ausstattung\":[\"Wifi\"]}"
   },
   {
     "ID": 784,
@@ -798,9 +798,9 @@
   },
   {
     "ID": 1296,
-    "Query": "Smartwatch mit GPS und Herzfrequenzmesser",
+    "Query": "Smartwatch mit Standort und Herzfrequenzmesser",
     "Category": "Wearables",
-    "Entities": "{\"ausstattung\":[\"GPS\",\"Herzfrequenzmesser\"]}"
+    "Entities": "{\"ausstattung\":[\"GPS\"]}"
   },
   {
     "ID": 1274,

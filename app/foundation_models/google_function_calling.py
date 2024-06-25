@@ -147,6 +147,8 @@ class GoogleFunctionCalling:
                                 "Android TV",
                                 "Touch Display",
                                 "Tastatur",
+                                "Wifi",
+                                "GPS",
                             ],
                         },
                     },
@@ -277,7 +279,7 @@ class GoogleFunctionCalling:
                             "enum": [
                                 "RTX 4060",
                                 "RTX 4090",
-                                "GeForce RTX 4070",
+                                "RTX 3070" "GeForce RTX 4070",
                                 "GeForce RTX 4090",
                             ],
                         },

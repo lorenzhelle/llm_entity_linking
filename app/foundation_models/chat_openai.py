@@ -23,7 +23,6 @@ def get_api_base(model: AIModelType) -> str:
     if (
         model == AIModelType.GPT3
         or model == AIModelType.GPT4_TURBO
-        or model == AIModelType.GPT4
         or model == AIModelType.GPT4_O
     ):
         print("no api base needed")
@@ -36,7 +35,6 @@ def get_api_key(model: AIModelType) -> str:
     if (
         model == AIModelType.GPT3
         or model == AIModelType.GPT4_TURBO
-        or model == AIModelType.GPT4
         or model == AIModelType.GPT4_O
     ):
         return get_api_key_from_env_file("API_KEY_OPEN_AI")
@@ -55,8 +53,6 @@ def get_api_key(model: AIModelType) -> str:
 def get_model_name(model: AIModelType) -> str:
     if model == AIModelType.GPT3:
         return "gpt-3.5-turbo"
-    elif model == AIModelType.GPT4:
-        return "gpt-4"
     elif model == AIModelType.GPT4_TURBO:
         return "gpt-4-turbo"
     elif model == AIModelType.GPT4_O:

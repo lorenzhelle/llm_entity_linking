@@ -33,6 +33,7 @@ json_schema = {
                             "type": "string",
                             "enum": [
                                 "gr\u00f6\u00dfer als 34 Zoll",
+                                "10 Zoll",
                                 "11 Zoll",
                                 "17 Zoll",
                                 "24 Zoll",
@@ -122,6 +123,8 @@ json_schema = {
                                 "Android TV",
                                 "Touch Display",
                                 "Tastatur",
+                                "Wifi",
+                                "GPS",
                             ],
                         },
                     }
@@ -301,6 +304,7 @@ json_schema = {
                             "enum": [
                                 "RTX 4060",
                                 "RTX 4090",
+                                "RTX 3070",
                                 "GeForce RTX 4070",
                                 "GeForce RTX 4090",
                             ],
