@@ -9,7 +9,7 @@
     "ID": 1254,
     "Query": "Fernseher mit 8K unter 1500 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"aufloesung\":[\"8K\"],\"preis\":[\"unter 1500 Euro\"]}"
+    "Entities": "{\"aufloesung\":[\"8K\"],\"preis\":[\"0\",\"1500\"]}"
   },
   {
     "ID": 996,
@@ -132,7 +132,7 @@
     "ID": 1261,
     "Query": "32-Zoll mit Smart-TV unter 400 Euro",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"funktionen\":[\"Smart TV\"],\"preis\":[\"unter 400 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"32 Zoll\"],\"funktionen\":[\"Smart TV\"],\"preis\":[\"0\",\"400\"]}"
   },
   {
     "ID": 1283,
@@ -187,7 +187,7 @@
     "ID": 1256,
     "Query": "4K-Monitor mit 144 Hz und 27 Zoll bis 500 Euro",
     "Category": "Monitor",
-    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"bis 500 Euro\"]}"
+    "Entities": "{\"aufloesung\":[\"4K\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]]}"
   },
   {
     "ID": 937,
@@ -265,7 +265,7 @@
     "ID": 1253,
     "Query": "Gaming-PC mit RTX 4090 und mindestens 1TB SSD bis 2000 Euro",
     "Category": "Computer",
-    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"bis 2000 Euro\"]}"
+    "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"grafikkarte\":[\"RTX 4090\"],\"ausstattung\":[\"SSD-Festplatte\"],\"preis\":[\"0\",\"2000\"]}"
   },
   {
     "ID": 964,
@@ -331,7 +331,7 @@
     "ID": 1259,
     "Query": "MacBook Pro mit M2-Chip und 16GB RAM unter 2000 Euro",
     "Category": "Laptops",
-    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"MacBook Pro\"],\"prozessor\":[\"M2\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"unter 2000 Euro\"]}"
+    "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"MacBook Pro\"],\"prozessor\":[\"M2\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"2000\"]}"
   },
   {
     "ID": 1196,
