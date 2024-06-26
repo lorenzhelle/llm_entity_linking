@@ -1,5 +1,11 @@
 [
     {
+        "id": "Kategorie",
+        "values": [
+            "Laptops"
+        ]
+    },
+    {
         "id": "Prozessor",
         "values": [
             "AMD Ryzen 5"
@@ -9,6 +15,12 @@
         "id": "Speicherkapazitaet",
         "values": [
             "512 GB"
+        ]
+    },
+    {
+        "id": "Ausstattung",
+        "values": [
+            "SSD-Festplatte"
         ]
     }
 ]
