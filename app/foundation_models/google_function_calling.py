@@ -73,6 +73,8 @@ class GoogleFunctionCalling:
                             "type": "string",
                             "enum": [
                                 "gr\u00f6\u00dfer als 34 Zoll",
+                                "9 Zoll",
+                                "10 Zoll",
                                 "11 Zoll",
                                 "17 Zoll",
                                 "24 Zoll",
@@ -207,6 +209,7 @@ class GoogleFunctionCalling:
                                 "M1",
                                 "Intel Core i9",
                                 "AMD Ryzen 7",
+                                "AMD Ryzen 5",
                                 "M2",
                                 "M2 Pro",
                                 "M2 Max",

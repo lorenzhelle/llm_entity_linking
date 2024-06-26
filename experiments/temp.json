@@ -1,0 +1,14 @@
+[
+    {
+        "id": "Prozessor",
+        "values": [
+            "AMD Ryzen 5"
+        ]
+    },
+    {
+        "id": "Speicherkapazitaet",
+        "values": [
+            "512 GB"
+        ]
+    }
+]

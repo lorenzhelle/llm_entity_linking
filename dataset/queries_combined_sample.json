@@ -319,7 +319,7 @@
     "ID": 1266,
     "Query": "Tablet mit abnehmbarer Tastatur und Windows-Betriebssystem bis 600 Euro",
     "Category": "Tablets",
-    "Entities": "{\"ausstattung\":[\"Abnehmbare Tastatur\"],\"betriebssystem\":[\"Windows\"],\"preis\":[\"0\",\"600\"]}"
+    "Entities": "{\"ausstattung\":[\"Tastatur\"],\"betriebssystem\":[\"Windows\"],\"preis\":[\"0\",\"600\"]}"
   },
   {
     "ID": 626,
@@ -337,7 +337,7 @@
     "ID": 1196,
     "Query": "pc gaming i9 4090 rtx 64 gb",
     "Category": "Computer",
-    "Entities": "{\"prozessor\":[\"Intel Core i9\"],\"zubehoerfuer\":[\"Gaming\"],\"arbeitsspeicher\":[\"64 GB\"]}"
+    "Entities": "{\"prozessor\":[\"Intel Core i9\"],\"zubehoerfuer\":[\"Gaming\"],\"arbeitsspeicher\":[\"64 GB\"],\"grafikkarte\":[\"GeForce RTX 4090\"]}"
   },
   {
     "ID": 1055,
@@ -427,7 +427,7 @@
     "ID": 1250,
     "Query": "Laptop mit 16 Zoll Bildschirm und 8GB RAM bis 800 Euro",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"16 Zoll\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"bis 800 Euro\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"16 Zoll\"],\"arbeitsspeicher\":[\"8 GB\"],\"preis\":[\"0\",\"800\"]}"
   },
   {
     "ID": 662,
@@ -461,7 +461,7 @@
   },
   {
     "ID": 1252,
-    "Query": "Smartphone mit bester Kameraqualit\u00e4t zwischen 500 und 1000 Euro",
+    "Query": "Smartphone mit guter Kameraqualit\u00e4t zwischen 500 und 1000 Euro",
     "Category": "Mobiltelefone",
     "Entities": "{\"preis\":[\"500\",\"1000\"]}"
   },
@@ -529,7 +529,7 @@
     "ID": 1292,
     "Query": "Smartphone mit AMOLED-Display und 128GB Speicher",
     "Category": "Mobiltelefone",
-    "Entities": "{\"speicher\":[\"128 GB\"]}"
+    "Entities": "{\"speicherkapazitaet\":[\"128 GB\"]}"
   },
   {
     "ID": 1287,
@@ -563,7 +563,7 @@
   },
   {
     "ID": 1312,
-    "Query": "Tablet mit 9 Zoll Display und 128GB Speicher",
+    "Query": "Ich such ein Tablet mit 9 Zoll und 128 Speicher",
     "Category": "Tablets",
     "Entities": "{\"bildschirmgroesse\":[\"9 Zoll\"],\"speicherkapazitaet\":[\"128 GB\"]}"
   },
@@ -788,7 +788,7 @@
     "ID": 1291,
     "Query": "Tablet mit 8 Zoll Display und Wi-Fi only",
     "Category": "Tablets",
-    "Entities": "{\"bildschirmgroesse\":[\"8 Zoll\"],\"ausstattung\":[\"Wifi\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"kleiner als 9 Zoll\"],\"ausstattung\":[\"Wifi\"]}"
   },
   {
     "ID": 784,
@@ -806,13 +806,13 @@
     "ID": 1274,
     "Query": "G\u00fcnstiger Fernseher mit 4K-Aufl\u00f6sung",
     "Category": "Fernseher",
-    "Entities": "{\"aufloesung\":[\"4K\"]}"
+    "Entities": "{\"aufloesung\":[\"Ultra-HD-4K\"]}"
   },
   {
     "ID": 1268,
-    "Query": "Smartphone mit bester Leistung f\u00fcr Mobile Gaming bis 700 Euro",
+    "Query": "Smartphone gut zum Gamen bis 700 Euro",
     "Category": "Mobiltelefone",
-    "Entities": "{\"anwendung\":[\"Mobile Gaming\"],\"preis\":[\"bis 700 Euro\"]}"
+    "Entities": "{\"preis\": [\"0\",\"700\"],\"zubehoerfuer\":[\"Gaming\"]}"
   },
   {
     "ID": 682,
@@ -836,7 +836,7 @@
     "ID": 1305,
     "Query": "Tablet mit abnehmbarer Tastatur und 10 Zoll Display",
     "Category": "Tablets",
-    "Entities": "{\"ausstattung\":[\"Abnehmbare Tastatur\"],\"bildschirmgroesse\":[\"10 Zoll\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"], \"ausstattung\":[\"Tastatur\", \"2 in 1 Convertible\"]}"
   },
   {
     "ID": 1263,
@@ -848,7 +848,7 @@
     "ID": 1300,
     "Query": "Smartphone mit optischem Zoom und 256GB Speicher",
     "Category": "Mobiltelefone",
-    "Entities": "{\"ausstattung\":[\"Optischer Zoom\"],\"speicher\":[\"256 GB\"]}"
+    "Entities": "{\"speicher\":[\"256 GB\"]}"
   },
   {
     "ID": 58,
@@ -872,7 +872,7 @@
     "ID": 1275,
     "Query": "Notebook mit Touchscreen und 360-Grad-Scharnier",
     "Category": "Laptops",
-    "Entities": "{\"ausstattung\":[\"Touch Display\"]}"
+    "Entities": "{\"ausstattung\":[\"Touch Display\",\"2 in 1 Convertible\"]}"
   },
   {
     "ID": 1211,
@@ -895,8 +895,8 @@
   {
     "ID": 1306,
     "Query": "Smartwatch mit LTE und Musikstreaming",
-    "Category": "Wearables",
-    "Entities": "{\"verbindung\":[\"LTE\"],\"ausstattung\":[\"Musikstreaming\"]}"
+    "Category": "Other",
+    "Entities": "{\"ausstattung\":[\"mobiles Internet\"]}"
   },
   {
     "ID": 85,
@@ -926,7 +926,7 @@
     "ID": 1301,
     "Query": "Laptop mit 17 Zoll Bildschirm und Windows 11",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"17 Zoll\"],\"betriebssystem\":[\"Windows 11\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"17 Zoll\"],\"betriebssystem\":[\"Windows\"]}"
   },
   {
     "ID": 693,
@@ -956,7 +956,7 @@
     "ID": 1297,
     "Query": "Fernseher mit 65 Zoll und OLED-Display",
     "Category": "Fernseher",
-    "Entities": "{\"bildschirmgroesse\":[\"65 - 69 Zoll\"],\"displaytyp\":[\"OLED\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"65 - 69 Zoll\"],\"displaytechnologie\":[\"OLED\"]}"
   },
   {
     "ID": 639,
@@ -968,7 +968,7 @@
     "ID": 1258,
     "Query": "Tablet f\u00fcr Zeichnen bis 600 Euro",
     "Category": "Tablets",
-    "Entities": "{\"anwendung\":[\"Zeichnen\"],\"preis\":[\"bis 600 Euro\"]}"
+    "Entities": "{\"ausstattung\":[\"Stifteingabe\"],\"preis\":[\"0\",\"600\"]}"
   },
   {
     "ID": 128,
@@ -986,7 +986,7 @@
     "ID": 583,
     "Query": "android smartphone ohne vertrag",
     "Category": "Mobiltelefone",
-    "Entities": "{}"
+    "Entities": "{\"betriebssystem\":[\"Android\"]}"
   },
   {
     "ID": 1303,
@@ -998,7 +998,7 @@
     "ID": 1276,
     "Query": "Monitor mit 144 Hz und 24 Zoll bis 300 Euro",
     "Category": "Monitor",
-    "Entities": "{\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"24 Zoll\"],\"preis\":[\"bis 300 Euro\"]}"
+    "Entities": "{\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"24 Zoll\"],\"preis\":[\"0\",\"300\"]}"
   },
   {
     "ID": 1298,
@@ -1118,7 +1118,7 @@
     "ID": 363,
     "Query": "notebook 15 zoll i7",
     "Category": "Laptops",
-    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"]}"
+    "Entities": "{\"bildschirmgroesse\":[\"15 Zoll\"],\"prozessor\":[\"Intel Core i7\"]}"
   },
   {
     "ID": 1310,

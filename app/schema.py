@@ -4,22 +4,27 @@ json_schema = {
     "parameters": {
         "type": "object",
         "description": "Parameter für die Funktion",
-        "required": ["Kategorie"],
         "properties": {
             "Kategorie": {
-                "type": "array",
-                "description": "Kategorie die genannt wurden oder Andere wenn keine passt",
-                "items": {
-                    "type": "string",
-                    "enum": [
-                        "Fernseher",
-                        "Mobiltelefone",
-                        "Tablets",
-                        "Computer",
-                        "Monitor",
-                        "Laptops",
-                        "Andere",
-                    ],
+                "type": "object",
+                "description": "Kategorie des gewünschten Produkts.",
+                "properties": {
+                    "values": {
+                        "type": "array",
+                        "description": "Kategorie die genannt wurden",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "Fernseher",
+                                "Mobiltelefone",
+                                "Tablets",
+                                "Computer",
+                                "Monitor",
+                                "Laptops",
+                                "Andere",
+                            ],
+                        },
+                    }
                 },
             },
             "Bildschirmgroesse": {
@@ -33,6 +38,8 @@ json_schema = {
                             "type": "string",
                             "enum": [
                                 "gr\u00f6\u00dfer als 34 Zoll",
+                                "kleiner als 9 Zoll",
+                                "9 Zoll",
                                 "10 Zoll",
                                 "11 Zoll",
                                 "17 Zoll",
@@ -66,7 +73,7 @@ json_schema = {
                 "properties": {
                     "values": {
                         "type": "array",
-                        "description": "Marke des gewünschten Produkts.",
+                        "description": "Marke die genannt wurden",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -139,12 +146,7 @@ json_schema = {
                         "description": "Aufloesung die genannt wurden",
                         "items": {
                             "type": "string",
-                            "enum": [
-                                "Ultra-HD-8K",
-                                "Ultra-HD ",
-                                "Ultra-HD-4K",
-                                "Full-HD",
-                            ],
+                            "enum": ["Ultra-HD-8K", "Ultra-HD", "Ultra-HD-4K"],
                         },
                     }
                 },
@@ -221,6 +223,7 @@ json_schema = {
                                 "M1",
                                 "Intel Core i9",
                                 "AMD Ryzen 7",
+                                "AMD Ryzen 5",
                                 "M2",
                                 "M2 Pro",
                                 "M2 Max",
