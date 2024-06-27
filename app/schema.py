@@ -172,17 +172,6 @@ json_schema = {
                     }
                 },
             },
-            "Bildwiederholfrequenz": {
-                "type": "object",
-                "description": "Bildwiederholfrequenz des gewünschten Produkts.",
-                "properties": {
-                    "values": {
-                        "type": "array",
-                        "description": "Bildwiederholfrequenz die genannt wurden",
-                        "items": {"type": "string", "enum": ["100 Hz"]},
-                    }
-                },
-            },
             "Zubehoerfuer": {
                 "type": "object",
                 "description": "Zubehoerfuer des gewünschten Produkts.",
