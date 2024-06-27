@@ -2,25 +2,17 @@
     {
         "id": "Kategorie",
         "values": [
-            "Laptops"
+            "Fernseher"
         ]
     },
     {
-        "id": "Prozessor",
+        "id": "Aufloesung",
         "values": [
-            "AMD Ryzen 5"
+            "Ultra-HD-8K"
         ]
     },
     {
-        "id": "Speicherkapazitaet",
-        "values": [
-            "512 GB"
-        ]
-    },
-    {
-        "id": "Ausstattung",
-        "values": [
-            "SSD-Festplatte"
-        ]
+        "id": "Preis",
+        "maximum": 1500
     }
 ]

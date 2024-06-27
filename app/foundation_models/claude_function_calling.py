@@ -1,4 +1,5 @@
 import json
+import re
 from typing import Union
 
 import anthropic
@@ -8,6 +9,15 @@ from app.foundation_models.chat_openai import (
     get_model_name,
 )
 from app.models.models import FilterGeneratorOutput
+
+
+def parse_number_from_string(input_string: str):
+    # Use regular expression to find numbers in the string
+    match = re.search(r"\d+", input_string)
+    if match:
+        return int(match.group(0))  # Convert the found number to integer
+    else:
+        return None  # Return None if no number is found
 
 
 class ClaudeFunctionCalling:
@@ -30,6 +40,8 @@ class ClaudeFunctionCalling:
         self.model = model
         self.functions = functions
         self.system_prompt = system_prompt
+
+    import re
 
     async def generate_response(self, prompt: str) -> list[FilterGeneratorOutput]:
         system_message = (
@@ -57,8 +69,6 @@ class ClaudeFunctionCalling:
             ],
         )
 
-        print(response)
-
         tool_output = next(
             (
                 message.input
@@ -70,15 +80,37 @@ class ClaudeFunctionCalling:
 
         data = []
 
+        print("tool_output", tool_output)
+
+        print("type(tool_output)", type(tool_output))
+
         # convert data to FilterGeneratorOutput
         for attr in tool_output:
             filter_data = tool_output[attr]
+            print("filter_data", filter_data)
 
             # replace unknown token with Null if it is a string
             if type(filter_data) is str:
                 filter_data = filter_data.replace("<UNKNOWN>", "null")
                 # convert string to json
-                filter_data = json.loads(filter_data)
+                try:
+                    filter_data = json.loads(filter_data)
+                except json.JSONDecodeError:
+                    # if it is not a valid json, continue
+                    filter_data = filter_data
+                    if "max" in filter_data or "min" in filter_data:
+                        temp_output = FilterGeneratorOutput(id=attr, values=[])
+                        if "max" in filter_data:
+                            max_value = parse_number_from_string(filter_data)
+                            temp_output.maximum = max_value
+                        if "min" in filter_data:
+                            min_value = parse_number_from_string(filter_data)
+                            temp_output.minimum = min_value
+                        data.append(temp_output)
+                    else:
+                        data.append(
+                            FilterGeneratorOutput(id=attr, values=[filter_data])
+                        )
 
             if type(filter_data) is bool:
                 continue
@@ -88,7 +120,9 @@ class ClaudeFunctionCalling:
                 data.append(FilterGeneratorOutput(id=attr, values=values))
                 continue
 
-            if filter_data.get("max") is not None or filter_data.get("min") is not None:
+            if hasattr(filter_data, "get") and (
+                filter_data.get("max") is not None or filter_data.get("min") is not None
+            ):
                 data.append(
                     FilterGeneratorOutput(
                         id=attr,
@@ -99,7 +133,7 @@ class ClaudeFunctionCalling:
                 )
                 continue
 
-            if filter_data.get("values") is not None:
+            if hasattr(filter_data, "get") and filter_data.get("values") is not None:
                 print("handle values")
                 # is discrete filter
                 values = filter_data.get("values")
