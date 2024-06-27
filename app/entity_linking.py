@@ -52,6 +52,7 @@ class EntityLinking:
         elif (
             model == AIModelType.MISTRAL_LARGE
             or model == AIModelType.MISTRAL_MIXTRAL_8x22B
+            or model == AIModelType.MISTRAL_SMALL
         ):
             print("using mistral")
             self.llm = MistralFunctionCalling(

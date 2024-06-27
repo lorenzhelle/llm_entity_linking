@@ -15,6 +15,7 @@ class AIModelType(str, Enum):
     CLAUDE_OPUS = "CLAUDE_OPUS"
     CLAUDE_SONNET = "CLAUDE_SONNET"
     MISTRAL_LARGE = "MISTRAL_LARGE"
+    MISTRAL_SMALL = "MISTRAL_SMALL"
     MISTRAL_MIXTRAL_8x22B = "MISTRAL_MIXTRAL_8x22B"
     GOOGLE_GEMINI_PRO = "GOOGLE_GEMINI_PRO"
 
@@ -42,7 +43,11 @@ def get_api_key(model: AIModelType) -> str:
         print("get api key for model", model)
         print("model", model)
         return get_api_key_from_env_file("API_KEY_CLAUDE")
-    if model == AIModelType.MISTRAL_LARGE or model == AIModelType.MISTRAL_MIXTRAL_8x22B:
+    if (
+        model == AIModelType.MISTRAL_LARGE
+        or model == AIModelType.MISTRAL_MIXTRAL_8x22B
+        or model == AIModelType.MISTRAL_SMALL
+    ):
         return get_api_key_from_env_file("API_KEY_MISTRAL")
     elif model == AIModelType.GOOGLE_GEMINI_PRO:
         return get_api_key_from_env_file("API_KEY_GOOGLE")
@@ -65,6 +70,8 @@ def get_model_name(model: AIModelType) -> str:
         return "mistral-large-latest"
     elif model == AIModelType.MISTRAL_MIXTRAL_8x22B:
         return "open-mixtral-8x22b"
+    elif model == AIModelType.MISTRAL_SMALL:
+        return "mistral-small-latest"
     elif model == AIModelType.GOOGLE_GEMINI_PRO:
         return "models/gemini-1.5-pro-latest"
     else:
