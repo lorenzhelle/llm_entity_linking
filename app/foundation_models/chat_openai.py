@@ -12,6 +12,7 @@ class AIModelType(str, Enum):
     GPT3 = "GPT3"
     GPT4_TURBO = "GPT4_TURBO"
     GPT4_O = "GPT4_O"
+    GPT4_O_MINI = "GPT4_O_MINI"
     CLAUDE_OPUS = "CLAUDE_OPUS"
     CLAUDE_SONNET = "CLAUDE_SONNET"
     MISTRAL_LARGE = "MISTRAL_LARGE"
@@ -25,6 +26,7 @@ def get_api_base(model: AIModelType) -> str:
         model == AIModelType.GPT3
         or model == AIModelType.GPT4_TURBO
         or model == AIModelType.GPT4_O
+        or model == AIModelType.GPT4_O_MINI
     ):
         print("no api base needed")
         return None
@@ -37,6 +39,7 @@ def get_api_key(model: AIModelType) -> str:
         model == AIModelType.GPT3
         or model == AIModelType.GPT4_TURBO
         or model == AIModelType.GPT4_O
+        or model == AIModelType.GPT4_O_MINI
     ):
         return get_api_key_from_env_file("API_KEY_OPEN_AI")
     if model == AIModelType.CLAUDE_OPUS or model == AIModelType.CLAUDE_SONNET:
@@ -62,6 +65,8 @@ def get_model_name(model: AIModelType) -> str:
         return "gpt-4-turbo"
     elif model == AIModelType.GPT4_O:
         return "gpt-4o"
+    elif model == AIModelType.GPT4_O_MINI:
+        return "gpt-4o-mini"
     elif model == AIModelType.CLAUDE_OPUS:
         return "claude-3-opus-20240229"
     elif model == AIModelType.CLAUDE_SONNET:
