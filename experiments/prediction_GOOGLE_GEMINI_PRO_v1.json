@@ -32,7 +32,7 @@
     "Query": "laptop 15 zoll angebote windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}]"
   },
   {
     "ID": 89,
@@ -242,7 +242,7 @@
     "Query": "4K-Monitor mit 144 Hz und 27 Zoll bis 500 Euro",
     "Category": "Monitor",
     "Entities": "{\"aufloesung\":[\"Ultra-HD\"],\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"27 Zoll\"],\"preis\":[\"0\",\"500\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Bildwiederholungsfrequenz\", \"values\": [\"144 Hz\"]}, {\"id\": \"Aufloesung\", \"values\": [\"Ultra-HD-4K\"]}, {\"id\": \"Preis\", \"maximum\": 500}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"27 Zoll\"]}]"
   },
   {
     "ID": 937,
@@ -312,7 +312,7 @@
     "Query": "laptop 17 zoll windows 11",
     "Category": "Laptops",
     "Entities": "{\"betriebssystem\":[\"Windows\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}]"
   },
   {
     "ID": 1051,
@@ -340,7 +340,7 @@
     "Query": "monitor gaming 4k 240 hz",
     "Category": "Monitor",
     "Entities": "{\"aufloesung\":[\"Ultra-HD \"],\"zubehoerfuer\":[\"Gaming\"],\"bildwiederholungsfrequenz\":[\"240 Hz\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Bildwiederholungsfrequenz\", \"values\": [\"240 Hz\"]}, {\"id\": \"Aufloesung\", \"values\": [\"Ultra-HD-4K\"]}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}]"
   },
   {
     "ID": 324,
@@ -375,7 +375,7 @@
     "Query": "computer pc komplettset angebot mit windows 11",
     "Category": "Computer",
     "Entities": "{\"betriebssystem\":[\"Windows\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Kategorie\", \"values\": [\"Computer\"]}]"
   },
   {
     "ID": 767,
@@ -389,14 +389,14 @@
     "Query": "computer pc komplettset angebot mit windows 11",
     "Category": "Computer",
     "Entities": "{\"betriebssystem\":[\"Windows\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Kategorie\", \"values\": [\"Computer\"]}]"
   },
   {
     "ID": 1266,
     "Query": "Tablet mit abnehmbarer Tastatur und Windows-Betriebssystem bis 600 Euro",
     "Category": "Tablets",
     "Entities": "{\"ausstattung\":[\"Tastatur\"],\"betriebssystem\":[\"Windows\"],\"preis\":[\"0\",\"600\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Preis\", \"maximum\": 600}, {\"id\": \"Betriebssystem\", \"values\": [\"Windows\"]}, {\"id\": \"Ausstattung\", \"values\": [\"Tastatur\"]}, {\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}]"
   },
   {
     "ID": 626,
@@ -410,7 +410,7 @@
     "Query": "MacBook Pro mit M2-Chip und 16GB RAM unter 2000 Euro",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"MacBook Pro\"],\"prozessor\":[\"M2\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"2000\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 2000}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Pro\"]}]"
   },
   {
     "ID": 1196,
@@ -431,14 +431,14 @@
     "Query": "handys ohne vertrag xiaomi",
     "Category": "Mobiltelefone",
     "Entities": "{\"marke\":[\"Xiaomi\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Marke\", \"values\": [\"Xiaomi\"]}]"
   },
   {
     "ID": 1163,
     "Query": "pc lautsprecher",
     "Category": "Other",
     "Entities": "{}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}]"
   },
   {
     "ID": 1294,
@@ -613,7 +613,7 @@
     "Query": "Samsung Galaxy",
     "Category": "Mobiltelefone",
     "Entities": "{\"marke\":[\"Samsung\"],\"modellreihe\":[\"Galaxy\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Modellreihe\", \"values\": [\"Galaxy\"]}, {\"id\": \"Marke\", \"values\": [\"Samsung\"]}]"
   },
   {
     "ID": 1128,
@@ -655,7 +655,7 @@
     "Query": "Laptop mit 13 Zoll Bildschirm und 16GB RAM bis 1000 Euro",
     "Category": "Laptops",
     "Entities": "{\"bildschirmgroesse\":[\"13 Zoll\"],\"arbeitsspeicher\":[\"16 GB\"],\"preis\":[\"0\",\"1000\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Arbeitsspeicher\", \"values\": [\"16 GB\"]}, {\"id\": \"Preis\", \"maximum\": 1000}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"13 Zoll\"]}]"
   },
   {
     "ID": 595,
@@ -683,7 +683,7 @@
     "Query": "Ich such ein Tablet mit 9 Zoll und 128 Speicher",
     "Category": "Tablets",
     "Entities": "{\"bildschirmgroesse\":[\"9 Zoll\"],\"speicherkapazitaet\":[\"128 GB\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Speicherkapazitaet\", \"values\": [\"128 GB\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"9 Zoll\"]}]"
   },
   {
     "ID": 32,
@@ -725,7 +725,7 @@
     "Query": "PC",
     "Category": "Computer",
     "Entities": "{}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Computer\"]}]"
   },
   {
     "ID": 175,
@@ -746,7 +746,7 @@
     "Query": "tv lowboard schwarz matt",
     "Category": "Other",
     "Entities": "{}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Fernseher\"]}, {\"id\": \"Farbe\", \"values\": [\"schwarz\"]}]"
   },
   {
     "ID": 19,
@@ -802,7 +802,7 @@
     "Query": "laptop tasche",
     "Category": "Other",
     "Entities": "{}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}]"
   },
   {
     "ID": 582,
@@ -865,7 +865,7 @@
     "Query": "Laptop mit guter Akkulaufzeit bis 1000 Euro",
     "Category": "Laptops",
     "Entities": "{\"preis\":[\"0\",\"1000\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}]"
   },
   {
     "ID": 460,
@@ -893,7 +893,7 @@
     "Query": "Tablet mit 10 Zoll Display und Android-Betriebssystem unter 300 Euro",
     "Category": "Tablets",
     "Entities": "{\"bildschirmgroesse\":[\"10 Zoll\"],\"betriebssystem\":[\"Android\"], \"preis\": [\"0\",\"300\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Preis\", \"maximum\": 300}, {\"id\": \"Betriebssystem\", \"values\": [\"Android\"]}, {\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"10 Zoll\"]}]"
   },
   {
     "ID": 1108,
@@ -907,7 +907,7 @@
     "Query": "laptop 17 zoll gaming",
     "Category": "Laptops",
     "Entities": "{\"zubehoerfuer\":[\"Gaming\"],\"bildschirmgroesse\":[\"17 Zoll\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"17 Zoll\"]}]"
   },
   {
     "ID": 536,
@@ -921,7 +921,7 @@
     "Query": "ipad pro 2022 12,9 zoll h\u00fclle",
     "Category": "Other",
     "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPad Air\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Modellreihe\", \"values\": [\"iPad Pro\"]}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"12 Zoll\"]}]"
   },
   {
     "ID": 1177,
@@ -977,14 +977,14 @@
     "Query": "Smartphone gut zum Gamen bis 700 Euro",
     "Category": "Mobiltelefone",
     "Entities": "{\"preis\": [\"0\",\"700\"],\"zubehoerfuer\":[\"Gaming\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Preis\", \"maximum\": 700}, {\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}, {\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}]"
   },
   {
     "ID": 682,
     "Query": "mobil phone",
     "Category": "Mobiltelefone",
     "Entities": "{}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}]"
   },
   {
     "ID": 541,
@@ -1131,7 +1131,7 @@
     "Query": "monitor 27 zoll curved",
     "Category": "Monitor",
     "Entities": "{\"art\":[\"curved\"],\"bildschirmgroesse\":[\"27 Zoll\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Bildschirmgroesse\", \"values\": [\"27 Zoll\"]}, {\"id\": \"Kategorie\", \"values\": [\"Monitor\"]}, {\"id\": \"Art\", \"values\": [\"curved\"]}]"
   },
   {
     "ID": 1277,
@@ -1194,7 +1194,7 @@
     "Query": "Monitor mit 144 Hz und 24 Zoll bis 300 Euro",
     "Category": "Monitor",
     "Entities": "{\"bildwiederholungsfrequenz\":[\"144 Hz\"],\"bildschirmgroesse\":[\"24 Zoll\"],\"preis\":[\"0\",\"300\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Bildwiederholungsfrequenz\", \"values\": [\"144 Hz\"]}, {\"id\": \"Preis\", \"maximum\": 300}, {\"id\": \"Bildschirmgroesse\", \"values\": [\"24 Zoll\"]}]"
   },
   {
     "ID": 1298,
@@ -1285,14 +1285,14 @@
     "Query": "pc komplett set gaming samsung",
     "Category": "Computer",
     "Entities": "{\"marke\":[\"Samsung\"],\"zubehoerfuer\":[\"Gaming\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Zubehoerfuer\", \"values\": [\"Gaming\"]}, {\"id\": \"Kategorie\", \"values\": [\"Computer\"]}, {\"id\": \"Marke\", \"values\": [\"Samsung\"]}]"
   },
   {
     "ID": 483,
     "Query": "iphone 15 pro max h\u00fclle mit kameraschutz",
     "Category": "Other",
     "Entities": "{\"marke\":[\"Apple\"],\"modellreihe\":[\"iPhone 15 Pro\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Kategorie\", \"values\": [\"Mobiltelefone\"]}, {\"id\": \"Modellreihe\", \"values\": [\"iPhone 15 Pro\"]}]"
   },
   {
     "ID": 1257,
@@ -1383,14 +1383,14 @@
     "Query": "samsung tablet h\u00fclle mit tastatur",
     "Category": "Other",
     "Entities": "{\"marke\":[\"Samsung\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Ausstattung\", \"values\": [\"Tastatur\"]}, {\"id\": \"Kategorie\", \"values\": [\"Tablets\"]}, {\"id\": \"Marke\", \"values\": [\"Samsung\"]}]"
   },
   {
     "ID": 298,
     "Query": "macbook air m2 15 zoll",
     "Category": "Laptops",
     "Entities": "{\"marke\":[\"Apple\"],\"prozessor\":[\"M2\"],\"modellreihe\":[\"MacBook Air\"],\"bildschirmgroesse\":[\"15 Zoll\"]}",
-    "Prediction": null
+    "Prediction": "[{\"id\": \"Bildschirmgroesse\", \"values\": [\"15 Zoll\"]}, {\"id\": \"Kategorie\", \"values\": [\"Laptops\"]}, {\"id\": \"Prozessor\", \"values\": [\"M2\"]}, {\"id\": \"Modellreihe\", \"values\": [\"MacBook Air\"]}, {\"id\": \"Marke\", \"values\": [\"Apple\"]}]"
   },
   {
     "ID": 158,
