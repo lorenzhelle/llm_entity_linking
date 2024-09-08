@@ -1,11 +1,8 @@
-import json
-from typing import Union
-
-from pydantic import BaseModel
 from app.foundation_models.chat_openai import AIModelType
 
 from app.foundation_models.claude_function_calling import ClaudeFunctionCalling
 from app.foundation_models.google_function_calling import GoogleFunctionCalling
+from app.foundation_models.llama_function_calling import LlamaFunctionCalling
 from app.foundation_models.mistral_function_calling import MistralFunctionCalling
 from app.foundation_models.openai_function_calling import (
     ChatOpenAIFunctionCalling,
@@ -13,7 +10,6 @@ from app.foundation_models.openai_function_calling import (
 from langchain.prompts.prompt import PromptTemplate
 
 from app.models.models import FilterGeneratorOutput
-from app.utils.validation import validate_price_filter
 
 
 template = """
@@ -42,7 +38,6 @@ class EntityLinking:
         system_prompt = "Only use the functions you have been provided with. Only use existing filter values. If you dont find filter values that match the conversation, return an empty array."
 
         if model == AIModelType.CLAUDE_OPUS or model == AIModelType.CLAUDE_SONNET:
-            print("using claude")
             self.llm = ClaudeFunctionCalling(
                 temperature=0.0,
                 system_prompt=system_prompt,
@@ -64,6 +59,13 @@ class EntityLinking:
         elif model == AIModelType.GOOGLE_GEMINI_PRO:
             print("using google")
             self.llm = GoogleFunctionCalling(
+                temperature=0.0,
+                system_prompt=system_prompt,
+                functions=[schema],
+                model=model,
+            )
+        elif model == AIModelType.LLAMA_3_8B or model == AIModelType.LLAMA_3_70B:
+            self.llm = LlamaFunctionCalling(
                 temperature=0.0,
                 system_prompt=system_prompt,
                 functions=[schema],

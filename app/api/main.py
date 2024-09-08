@@ -1,15 +1,17 @@
-import os
-import sys
-
-
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List
 from app.entity_linking import EntityLinking
 from app.foundation_models.chat_openai import AIModelType
-from app.schema import json_schema
+
+# load_and_export.py
+from dotenv import load_dotenv
+import os
 
 app = FastAPI()
+
+# Load the environment variables from .env file
+load_dotenv()
 
 
 class FilterRequest(BaseModel):

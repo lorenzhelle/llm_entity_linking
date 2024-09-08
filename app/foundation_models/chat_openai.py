@@ -19,6 +19,8 @@ class AIModelType(str, Enum):
     MISTRAL_SMALL = "MISTRAL_SMALL"
     MISTRAL_MIXTRAL_8x22B = "MISTRAL_MIXTRAL_8x22B"
     GOOGLE_GEMINI_PRO = "GOOGLE_GEMINI_PRO"
+    LLAMA_3_8B = "LLAMA_3_8B"
+    LLAMA_3_70B = "LLAMA_3_70B"
 
 
 def get_api_base(model: AIModelType) -> str:
@@ -54,6 +56,8 @@ def get_api_key(model: AIModelType) -> str:
         return get_api_key_from_env_file("API_KEY_MISTRAL")
     elif model == AIModelType.GOOGLE_GEMINI_PRO:
         return get_api_key_from_env_file("API_KEY_GOOGLE")
+    elif model == AIModelType.LLAMA_3_8B or model == AIModelType.LLAMA_3_70B:
+        return "dummy"
     else:
         raise ValueError(f"No API key found for {model}")
 
@@ -79,6 +83,10 @@ def get_model_name(model: AIModelType) -> str:
         return "mistral-small-latest"
     elif model == AIModelType.GOOGLE_GEMINI_PRO:
         return "models/gemini-1.5-pro-latest"
+    elif model == AIModelType.LLAMA_3_8B:
+        return "meta/meta-llama-3-8b"
+    elif model == AIModelType.LLAMA_3_70B:
+        return "meta/meta-llama-3-70b-instruct"
     else:
         raise ValueError("Invalid AI model type")
 
