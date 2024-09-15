@@ -96,10 +96,6 @@ class ChatOpenAIFunctionCalling:
                 if type(values) is str:
                     values = [values]
 
-                print("append data", values)
                 data.append(FilterGeneratorOutput(id=attr, values=values))
 
         return data
-
-    def name(self) -> str:
-        return f"ChatOpenAIFunctionCalling with (temperature={self.temperature})"
