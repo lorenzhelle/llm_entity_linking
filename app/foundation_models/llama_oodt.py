@@ -26,23 +26,8 @@ class LlamaOOTD:
         self.model = model
         self.system_prompt = system_prompt
 
-    async def generate_response(self, query: str) -> object:
+    async def generate_response(self, prompt: str) -> object:
         model = get_model_name(model=self.model)
-
-        # Creating the German prompt to detect out-of-domain queries
-        prompt = f"""
-        Klassifiziere die folgende Suchanfrage als entweder 'in-domain' oder 'out-of-domain'.
-        Du bist ein Produktberater im E-Commerce, spezialisiert auf Multimedia-Produkte (z. B. Smartphones, Laptops, Tablets). Deine Aufgabe ist es, Kunden dabei zu unterstützen, Produkte zu finden, die ihren Bedürfnissen entsprechen.
-        Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von Multimedia-Produkte zuständig bist.
-
-        Query: "{query}"
-
-        Gib die Antwort nur in folgender JSON-Struktur zurück:
-        {{
-          "query": "{query}",
-          "outOfDomain": true/false
-        }}
-        """
 
         response = ""
 

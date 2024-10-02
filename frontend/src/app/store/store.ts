@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { LLMModel } from "../common/constants";
+import { LLMModel } from "../constants/constants";
 
 interface SetupState {
   domain: string;

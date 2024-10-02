@@ -14,12 +14,14 @@ class MistralOOTD:
     system_prompt: Union[str, None] = None
     functions: list[any] = []
     model: AIModelType
+    domain: str
 
     def __init__(
         self,
         temperature=0.7,
         system_prompt: Union[str, None] = None,
         model: AIModelType = AIModelType.GPT4_TURBO,
+        domain: str = "Multimedia-Produkte (z. B. Smartphones, Laptops, Tablets)",
     ):
         api_key = get_api_key(model)
 
@@ -27,29 +29,15 @@ class MistralOOTD:
         self.temperature = temperature
         self.model = model
         self.system_prompt = system_prompt
+        self.domain = domain
 
-    async def generate_response(self, query: str) -> object:
+    async def generate_response(self, prompt: str) -> object:
         system_message = (
             self.system_prompt
             if self.system_prompt is not None
             else "Du bist ein KI-Assistent, der dabei hilft, Suchanfragen zu klassifizieren und zu erkennen, ob sie in den Bereich 'Out-of-Domain' fallen."
         )
         model = get_model_name(model=self.model)
-
-        # Creating the German prompt to detect out-of-domain queries
-        prompt = f"""
-        Klassifiziere die folgende Suchanfrage als entweder 'in-domain' oder 'out-of-domain'.
-        Du bist ein Produktberater im E-Commerce, spezialisiert auf Multimedia-Produkte (z. B. Smartphones, Laptops, Tablets). Deine Aufgabe ist es, Kunden dabei zu unterstützen, Produkte zu finden, die ihren Bedürfnissen entsprechen.
-        Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von Multimedia-Produkte zuständig bist.
-
-        Query: "{query}"
-
-        Gib die Antwort in folgender JSON-Struktur zurück:
-        {{
-          "query": "{query}",
-          "outOfDomain": true/false
-        }}
-        """
 
         response = self.client.chat(
             model=model,
@@ -62,8 +50,6 @@ class MistralOOTD:
             ],
             temperature=self.temperature,
         )
-
-        print(response.choices[0].message.content)
 
         # Extract and return the structured response as a JSON object
         try:

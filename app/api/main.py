@@ -66,6 +66,21 @@ class QueryRequest(BaseModel):
 
 @app.post("/check_domain")
 async def check_domain(request: QueryRequest):
+    # Creating the German prompt to detect out-of-domain queries
+    prompt = f"""
+    Klassifiziere die folgende Suchanfrage als entweder 'in-domain' oder 'out-of-domain'.
+    Du bist ein Produktberater im E-Commerce, spezialisiert auf {request.domain}. Deine Aufgabe ist es, Kunden dabei zu unterstützen, Produkte zu finden, die ihren Bedürfnissen entsprechen.
+    Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von {self.domain} zuständig bist.
+
+    Query: "{request.query}"
+
+    Gib die Antwort in folgender JSON-Struktur zurück:
+    
+    {{
+    "query": "{request.query}",
+    "outOfDomain": true/false
+    }}
+    """
     try:
         if request.model in [AIModelType.CLAUDE_OPUS, AIModelType.CLAUDE_SONNET]:
             chat_model = ClaudeOODT(model=request.model)
@@ -78,7 +93,7 @@ async def check_domain(request: QueryRequest):
         else:
             raise HTTPException(status_code=400, detail="Unsupported model")
 
-        response = await chat_model.generate_response(request.query)
+        response = await chat_model.generate_response(prompt=prompt)
         print(response)
         return {"inDomain": not response.get("outOfDomain", False)}
     except Exception as e:
