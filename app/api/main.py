@@ -1,8 +1,12 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Any, Dict, List
 from app.entity_linking import EntityLinking
 from app.foundation_models.chat_openai import AIModelType
+from app.foundation_models.claude_oodt import ClaudeOODT
+from app.foundation_models.mistral_oodt import MistralOOTD
+from app.foundation_models.llama_oodt import LlamaOOTD
+from app.foundation_models.openai_oodt import ChatOpenAIOutOfDomainDetection
 
 # load_and_export.py
 from dotenv import load_dotenv
@@ -53,3 +57,35 @@ async def recognize_filters(request: FilterRequest):
         filter_generator_output=filter_generator_output,
         recognized_filters=recognized_filters,
     )
+
+
+class QueryRequest(BaseModel):
+    query: str
+    model: AIModelType
+
+
+@app.post("/check_domain")
+async def check_domain(request: QueryRequest):
+    try:
+        if request.model in [AIModelType.CLAUDE_OPUS, AIModelType.CLAUDE_SONNET]:
+            chat_model = ClaudeOODT(model=request.model)
+        elif request.model in [AIModelType.MISTRAL_LARGE, AIModelType.MISTRAL_SMALL]:
+            chat_model = MistralOOTD(model=request.model)
+        elif request.model in [AIModelType.LLAMA_3_8B, AIModelType.LLAMA_3_70B]:
+            chat_model = LlamaOOTD(model=request.model)
+        elif request.model in [AIModelType.GPT3, AIModelType.GPT4_TURBO]:
+            chat_model = ChatOpenAIOutOfDomainDetection(model=request.model)
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported model")
+
+        response = await chat_model.generate_response(request.query)
+        print(response)
+        return {"inDomain": not response.get("outOfDomain", False)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)

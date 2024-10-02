@@ -1,15 +1,16 @@
 import json
 from typing import Union
 
+import anthropic
+
 from app.foundation_models.chat_openai import (
     AIModelType,
     get_api_key,
     get_model_name,
 )
-from mistralai.client import MistralClient
 
 
-class MistralOOTD:
+class GoogleOODT:
     temperature: float
     system_prompt: Union[str, None] = None
     functions: list[any] = []
@@ -23,7 +24,7 @@ class MistralOOTD:
     ):
         api_key = get_api_key(model)
 
-        self.client = MistralClient(api_key=api_key)
+        self.client = anthropic.AsyncAnthropic(api_key=api_key)
         self.temperature = temperature
         self.model = model
         self.system_prompt = system_prompt
@@ -51,25 +52,23 @@ class MistralOOTD:
         }}
         """
 
-        response = self.client.chat(
+        response = await self.client.messages.create(
             model=model,
+            system=system_message,
+            max_tokens=2000,
             messages=[
-                {
-                    "role": "system",
-                    "content": system_message,
-                },
                 {"role": "user", "content": prompt},
             ],
             temperature=self.temperature,
         )
 
-        print(response.choices[0].message.content)
+        print(response.content[0].text)
 
         # Extract and return the structured response as a JSON object
         try:
-            structured_output = json.loads(response.choices[0].message.content)
+            structured_output = json.loads(response.content[0].text)
         except (json.JSONDecodeError, KeyError):
-            print("Invalid response format", response.choices[0].message.content)
+            print("Invalid response format", response.content[0].text)
             structured_output = {"error": "Invalid response format"}
 
         return structured_output

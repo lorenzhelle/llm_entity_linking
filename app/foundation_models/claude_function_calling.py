@@ -80,10 +80,6 @@ class ClaudeFunctionCalling:
 
         data = []
 
-        print("tool_output", tool_output)
-
-        print("type(tool_output)", type(tool_output))
-
         # convert data to FilterGeneratorOutput
         for attr in tool_output:
             filter_data = tool_output[attr]
