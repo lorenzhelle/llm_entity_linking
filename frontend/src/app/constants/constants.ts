@@ -7,6 +7,8 @@ export const LLM_MODELS = [
   "MISTRAL_SMALL",
   "LLAMA_3_8B",
   "LLAMA_3_70B",
+  "GPT4_O_MINI",
+  "GPT4_O",
 ] as const;
 
 export type LLMModel = (typeof LLM_MODELS)[number];

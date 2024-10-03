@@ -1,15 +1,12 @@
 import DomainInput from "./DomainInput";
 import JsonSchemaEditor from "./JsonSchemaEditor";
 import AIModelSelector from "./AIModelSelector";
-import { useSetupStore } from "../store/store";
 
 interface SetupProps {
   onComplete: () => void;
 }
 
 const Setup: React.FC<SetupProps> = ({ onComplete }) => {
-  const { domain, aiModel, jsonSchema } = useSetupStore();
-
   const handleComplete = () => {
     // You can add any additional logic here if needed
     onComplete();

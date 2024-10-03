@@ -14,14 +14,12 @@ class MistralOOTD:
     system_prompt: Union[str, None] = None
     functions: list[any] = []
     model: AIModelType
-    domain: str
 
     def __init__(
         self,
         temperature=0.7,
         system_prompt: Union[str, None] = None,
-        model: AIModelType = AIModelType.GPT4_TURBO,
-        domain: str = "Multimedia-Produkte (z. B. Smartphones, Laptops, Tablets)",
+        model: AIModelType = AIModelType.MISTRAL_MIXTRAL_8x22B,
     ):
         api_key = get_api_key(model)
 
@@ -29,7 +27,6 @@ class MistralOOTD:
         self.temperature = temperature
         self.model = model
         self.system_prompt = system_prompt
-        self.domain = domain
 
     async def generate_response(self, prompt: str) -> object:
         system_message = (

@@ -62,15 +62,14 @@ async def recognize_filters(request: FilterRequest):
 class QueryRequest(BaseModel):
     query: str
     model: AIModelType
+    domain: str
 
 
 @app.post("/check_domain")
 async def check_domain(request: QueryRequest):
-    # Creating the German prompt to detect out-of-domain queries
+    print(request)
     prompt = f"""
-    Klassifiziere die folgende Suchanfrage als entweder 'in-domain' oder 'out-of-domain'.
-    Du bist ein Produktberater im E-Commerce, spezialisiert auf {request.domain}. Deine Aufgabe ist es, Kunden dabei zu unterstützen, Produkte zu finden, die ihren Bedürfnissen entsprechen.
-    Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von {self.domain} zuständig bist.
+    Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von {request.domain} zuständig bist.
 
     Query: "{request.query}"
 
@@ -88,7 +87,12 @@ async def check_domain(request: QueryRequest):
             chat_model = MistralOOTD(model=request.model)
         elif request.model in [AIModelType.LLAMA_3_8B, AIModelType.LLAMA_3_70B]:
             chat_model = LlamaOOTD(model=request.model)
-        elif request.model in [AIModelType.GPT3, AIModelType.GPT4_TURBO]:
+        elif request.model in [
+            AIModelType.GPT3,
+            AIModelType.GPT4_TURBO,
+            AIModelType.GPT4_O_MINI,
+            AIModelType.GPT4_O,
+        ]:
             chat_model = ChatOpenAIOutOfDomainDetection(model=request.model)
         else:
             raise HTTPException(status_code=400, detail="Unsupported model")
@@ -103,4 +107,4 @@ async def check_domain(request: QueryRequest):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
