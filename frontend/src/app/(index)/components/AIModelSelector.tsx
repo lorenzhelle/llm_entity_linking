@@ -1,6 +1,6 @@
 import React from "react";
-import { useSetupStore } from "../store/store";
-import { LLM_MODELS, LLMModel } from "../constants/constants";
+import { useSetupStore } from "../lib/store";
+import { LLMModel, LLM_MODELS } from "../lib/constants";
 
 const AIModelSelector: React.FC = () => {
   const LLM = useSetupStore((state) => state.LLM);

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { LLMModel } from "../constants/constants";
+import { LLMModel } from "./constants";
 
 interface SetupState {
   domain: string;
@@ -8,6 +8,8 @@ interface SetupState {
   setDomain: (domain: string) => void;
   setLLM: (llm: LLMModel) => void;
   setJsonSchema: (jsonSchema: string) => void;
+  outOfDomainCheck: boolean;
+  setOutOfDomainCheck: (value: boolean) => void;
 }
 
 export const useSetupStore = create<SetupState>((set) => ({
@@ -17,4 +19,6 @@ export const useSetupStore = create<SetupState>((set) => ({
   setDomain: (domain) => set({ domain }),
   setLLM: (llm) => set({ LLM: llm }),
   setJsonSchema: (jsonSchema) => set({ jsonSchema }),
+  outOfDomainCheck: false,
+  setOutOfDomainCheck: (value) => set({ outOfDomainCheck: value }),
 }));

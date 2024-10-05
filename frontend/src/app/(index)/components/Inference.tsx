@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import axios, { AxiosError } from "axios";
-import { useSetupStore } from "../store/store";
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import axios, { AxiosError } from "axios";
+import React, { useState } from "react";
 import Tag from "./Tag";
+import { EntitiesResult } from "./EntitiesResult";
+import { useSetupStore } from "../lib/store";
 
 const Inference: React.FC = () => {
   const [query, setQuery] = useState("");
@@ -13,25 +14,38 @@ const Inference: React.FC = () => {
     message: string;
   } | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [entities, setEntities] = useState<Record<string, unknown> | null>(
+    null
+  );
 
   const selectedLLM = useSetupStore((state) => state.LLM);
   const selectedDomain = useSetupStore((state) => state.domain);
+  const jsonSchema = useSetupStore((state) => state.jsonSchema);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setEntities(null);
     try {
       const response = await axios.post("/api/check_domain", {
         query,
         model: selectedLLM,
         domain: selectedDomain,
       });
+      const inDomain = response.data.inDomain;
       setResult({
-        status: response.data.inDomain ? "success" : "warning",
-        message: response.data.inDomain
-          ? "Query is in domain"
-          : "Query is out of domain",
+        status: inDomain ? "success" : "warning",
+        message: inDomain ? "Query is in domain" : "Query is out of domain",
       });
+
+      if (inDomain) {
+        const entityResponse = await axios.post("/api/recognize-filters", {
+          message: query,
+          schema: jsonSchema,
+          model: selectedLLM,
+        });
+        setEntities(entityResponse.data);
+      }
     } catch (error) {
       console.error("Error checking domain:", error);
 
@@ -47,14 +61,14 @@ const Inference: React.FC = () => {
     }
   };
 
-  if (!selectedLLM || !selectedDomain) {
+  if (!selectedLLM || !selectedDomain || !jsonSchema) {
     return (
       <Alert variant="destructive">
         <ExclamationTriangleIcon className="h-4 w-4" />
         <AlertTitle>Incomplete Setup</AlertTitle>
         <AlertDescription>
-          Please select an LLM and enter a domain in the setup page before
-          proceeding with the domain check.
+          Please select an LLM, enter a domain and a JSON Schema in the setup
+          page before proceeding with the domain check.
         </AlertDescription>
       </Alert>
     );
@@ -89,7 +103,7 @@ const Inference: React.FC = () => {
           className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:bg-blue-300"
           disabled={isLoading || !query}
         >
-          {isLoading ? "Checking..." : "Check Domain"}
+          {isLoading ? "Recognizing..." : "Recognize Entities"}
         </button>
         {result && (
           <Alert
@@ -98,6 +112,7 @@ const Inference: React.FC = () => {
             <AlertDescription>{result.message}</AlertDescription>
           </Alert>
         )}
+        {entities && <EntitiesResult entities={entities} />}
       </form>
     </div>
   );

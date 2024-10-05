@@ -56,6 +56,8 @@ class ChatOpenAIFunctionCalling:
             function_call={"name": "entity_linking"},
         )
 
+        print("response", response.choices[0].message.function_call.arguments)
+
         tool_output = json.loads(response.choices[0].message.function_call.arguments)
         data = []
 
@@ -99,3 +101,27 @@ class ChatOpenAIFunctionCalling:
                 data.append(FilterGeneratorOutput(id=attr, values=values))
 
         return data
+
+    async def generate_response_generic(self, prompt: str) -> object:
+        system_message = (
+            self.system_prompt
+            if self.system_prompt is not None
+            else "You are an AI assistant that helps people find information."
+        )
+        model = get_model_name(model=self.model)
+
+        response = await self.openai.chat.completions.create(
+            model=model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_message,
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=self.temperature,
+            functions=self.functions,
+            function_call={"name": "entity_linking"},
+        )
+
+        return json.loads(response.choices[0].message.function_call.arguments)

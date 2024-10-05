@@ -90,3 +90,9 @@ class EntityLinking:
         response = self.llm.generate_response(prompt=prompt)
 
         return response
+
+    def generate_response_generic(self, conversation: str) -> object:
+        prompt = function_calling_ner_tempalte.format(query=conversation)
+        response = self.llm.generate_response_generic(prompt=prompt)
+
+        return response

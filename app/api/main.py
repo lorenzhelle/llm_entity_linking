@@ -1,3 +1,4 @@
+import json
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Any, Dict, List
@@ -18,9 +19,15 @@ app = FastAPI()
 load_dotenv()
 
 
+class QueryRequest(BaseModel):
+    query: str
+    model: AIModelType
+    domain: str
+
+
 class FilterRequest(BaseModel):
     message: str
-    schema: Dict[str, Any]
+    schema: str
     model: AIModelType
 
 
@@ -29,9 +36,28 @@ class FilterResponse(BaseModel):
     recognized_filters: List[Dict[str, Any]]
 
 
-@app.post("/recognize-filters", response_model=FilterResponse)
+def generate_target_schema(
+    input_schema: Dict[str, Any], model: AIModelType
+) -> Dict[str, Any]:
+    target_schema = {
+        "name": "entity_linking",
+        "description": "Extrahiere die passenden Werte für die Filter aus der Anfrage",
+        "parameters": {
+            **input_schema,
+            "description": "Parameter für die Funktion",
+        },
+    }
+
+    return target_schema
+
+
+@app.post("/recognize-filters")
 async def recognize_filters(request: FilterRequest):
-    llm_module = EntityLinking(schema=request.schema, model=request.model)
+    print(request)
+    input_schema = json.loads(request.schema)
+
+    target_schema = generate_target_schema(input_schema, request.model)
+    llm_module = EntityLinking(schema=target_schema, model=request.model)
 
     if (
         request.model == AIModelType.MISTRAL_LARGE
@@ -40,34 +66,15 @@ async def recognize_filters(request: FilterRequest):
     ):
         filter_generator_output = llm_module.generate_sync(conversation=request.message)
     else:
-        filter_generator_output = await llm_module.generate_async(
+        filter_generator_output = await llm_module.generate_response_generic(
             conversation=request.message
         )
 
-    recognized_filters = []
-
-    for filter in filter_generator_output:
-        filtered_dict = {
-            k: v for k, v in filter.model_dump().items() if v is not None and v
-        }
-
-        recognized_filters.append(filtered_dict)
-
-    return FilterResponse(
-        filter_generator_output=filter_generator_output,
-        recognized_filters=recognized_filters,
-    )
-
-
-class QueryRequest(BaseModel):
-    query: str
-    model: AIModelType
-    domain: str
+    return filter_generator_output
 
 
 @app.post("/check_domain")
 async def check_domain(request: QueryRequest):
-    print(request)
     prompt = f"""
     Beantworte die Frage, ob diese Anfrage in deine Beratungsdomäne fällt oder nicht. Bedenke dabei, dass du nur für die Verkaufsberatung von {request.domain} zuständig bist.
 

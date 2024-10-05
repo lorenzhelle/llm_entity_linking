@@ -363,3 +363,20 @@ json_schema = {
         },
     },
 }
+
+
+test_schema = {
+    "name": "entity_linking",
+    "description": "Extrahiere die passenden Werte für die Filter aus der Anfrage",
+    "parameters": {
+        "type": "object",
+        "description": "Parameter für die Funktion",
+        "properties": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {"category": {"type": "string"}},
+            "required": ["category"],
+        },
+    },
+}
