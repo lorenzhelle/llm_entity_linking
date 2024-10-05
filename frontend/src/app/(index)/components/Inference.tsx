@@ -3,9 +3,10 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import axios, { AxiosError } from "axios";
 import React, { useState } from "react";
-import Tag from "./Tag";
-import { EntitiesResult } from "./EntitiesResult";
 import { useSetupStore } from "../lib/store";
+import { EntitiesResult } from "./EntitiesResult";
+import RecognizeEntitiesButton from "./RecognizeEntitiesButton";
+import Tag from "./Tag";
 
 const Inference: React.FC = () => {
   const [query, setQuery] = useState("");
@@ -17,28 +18,39 @@ const Inference: React.FC = () => {
   const [entities, setEntities] = useState<Record<string, unknown> | null>(
     null
   );
+  const [buttonState, setButtonState] = useState<
+    "idle" | "checking" | "linking" | "done"
+  >("idle");
 
-  const selectedLLM = useSetupStore((state) => state.LLM);
-  const selectedDomain = useSetupStore((state) => state.domain);
-  const jsonSchema = useSetupStore((state) => state.jsonSchema);
+  const {
+    LLM: selectedLLM,
+    domain: selectedDomain,
+    jsonSchema,
+    outOfDomainCheck,
+  } = useSetupStore();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setEntities(null);
+    setButtonState("checking");
+    let inDomain = false;
     try {
-      const response = await axios.post("/api/check_domain", {
-        query,
-        model: selectedLLM,
-        domain: selectedDomain,
-      });
-      const inDomain = response.data.inDomain;
-      setResult({
-        status: inDomain ? "success" : "warning",
-        message: inDomain ? "Query is in domain" : "Query is out of domain",
-      });
+      if (outOfDomainCheck) {
+        const response = await axios.post("/api/check_domain", {
+          query,
+          model: selectedLLM,
+          domain: selectedDomain,
+        });
+        inDomain = response.data.inDomain;
+        setResult({
+          status: inDomain ? "success" : "warning",
+          message: inDomain ? "Query is in domain" : "Query is out of domain",
+        });
+      }
 
-      if (inDomain) {
+      if (outOfDomainCheck && inDomain) {
+        setButtonState("linking");
         const entityResponse = await axios.post("/api/recognize-filters", {
           message: query,
           schema: jsonSchema,
@@ -46,6 +58,7 @@ const Inference: React.FC = () => {
         });
         setEntities(entityResponse.data);
       }
+      setButtonState("done");
     } catch (error) {
       console.error("Error checking domain:", error);
 
@@ -58,6 +71,7 @@ const Inference: React.FC = () => {
       }
     } finally {
       setIsLoading(false);
+      setTimeout(() => setButtonState("idle"), 1000); // Reset button state after 1 second
     }
   };
 
@@ -76,11 +90,15 @@ const Inference: React.FC = () => {
 
   return (
     <div className="w-full space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-lg font-semibold text-gray-700">Domain Check</h2>
+      <div className="flex justify-start items-center space-x-2">
         <Tag text={selectedLLM} />
+        {!outOfDomainCheck ? <Tag text="No OOTD check" /> : null}
       </div>
-      {selectedDomain ? <p>Domain: {selectedDomain}</p> : null}
+      {selectedDomain && outOfDomainCheck ? (
+        <>
+          <p>Domain: {selectedDomain}</p>
+        </>
+      ) : null}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label
@@ -98,17 +116,13 @@ const Inference: React.FC = () => {
             placeholder="Enter your query here"
           />
         </div>
-        <button
-          type="submit"
-          className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:bg-blue-300"
-          disabled={isLoading || !query}
-        >
-          {isLoading ? "Recognizing..." : "Recognize Entities"}
-        </button>
-        {result && (
-          <Alert
-            variant={result.status === "success" ? "default" : "destructive"}
-          >
+        <RecognizeEntitiesButton
+          isLoading={isLoading}
+          buttonState={buttonState}
+          disabled={isLoading || !query || buttonState !== "idle"}
+        />
+        {result?.status === "warning" && (
+          <Alert variant={"destructive"}>
             <AlertDescription>{result.message}</AlertDescription>
           </Alert>
         )}

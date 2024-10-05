@@ -14,7 +14,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center w-full max-w-3xl">
         <h1 className="text-2xl font-bold mb-4">Entity Linking</h1>
 
-        <div className="w-full flex justify-center mb-8">
+        <div className="w-full flex justify-center mb-4">
           <button
             className={`px-4 py-2 mr-4 ${
               currentStep === "setup" ? "bg-blue-500 text-white" : "bg-gray-200"
