@@ -14,9 +14,9 @@ const Setup: React.FC<SetupProps> = ({ onComplete }) => {
 
   return (
     <div className="w-full space-y-6">
-      <DomainInput />
       <AIModelSelector />
       <JsonSchemaEditor />
+      <DomainInput />
       <button
         onClick={handleComplete}
         className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
